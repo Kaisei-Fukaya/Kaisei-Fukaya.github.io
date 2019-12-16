@@ -1,0 +1,27 @@
+body{
+    background-color: dimgray;
+}
+button{
+    color: white;
+    background-color: darkslategrey;
+    padding: 10px;
+    font-family:monospace;
+    font-size: 20pt;
+    border-style: outset;
+    border: 5px dotted grey;
+}
+#mainDiv{
+    margin: auto;
+    width: 90%;
+    border: 5px double black;
+    background-color:darkgray;
+    padding: 10px;
+}
+#balanceText{
+    color: white;
+    background-color: #808080;
+    padding: 5px;
+    font-family:monospace;
+    font-size: 10pt;
+    border-style: outset;
+}

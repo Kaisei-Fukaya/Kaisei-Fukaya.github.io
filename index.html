@@ -10,15 +10,24 @@
 </head>
 <body>
     <div id="mainDiv">
-        <p id="balanceText">Balance is an entry for the 2018 JS13K Game Jam</p>
-        <button id="balanceButton">Play Balance</button>
+        <h1>Kaisei Fukaya</h1>
+        <p>Welcome to my GitHub web page. This will act as a hub for all of my web based projects.</p>
+        <h2>Balance</h2>
+        <p id="balanceText">Balance is an entry for the 2018 JS13K Game Jam.<br></p>
+        <div class="buttonImageCombo">
+            <button id="balanceButton">Play Balance</button>
+            <img id="balanceImage" src="img/screenshotLarge.jpg"></img>
+        </div>
+        <h2>Project</h2>
+        <p>Project text</p>
     </div>
 
 </body>
     <script>
         document.getElementById("balanceButton").onclick = LoadGame;
         function LoadGame(){
-            document.location.href="/balance_game/index.html";
+//            document.location.href="/balance_game/index.html";
+            window.open("/balance_game/index.html", "JS13K Balance");
         }
     </script>
 </html>

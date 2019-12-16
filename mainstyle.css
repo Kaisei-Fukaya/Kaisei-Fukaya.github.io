@@ -1,6 +1,10 @@
 body{
     background-color: dimgray;
 }
+@keyframes buttonAnim{
+    0% {border-style: outset;}
+    50% {border-style: inset; border-color: white}
+}
 button{
     color: white;
     background-color: darkslategrey;
@@ -8,20 +12,79 @@ button{
     font-family:monospace;
     font-size: 20pt;
     border-style: outset;
-    border: 5px dotted grey;
+    border: 5px outset grey;
+    border-radius: 10px;
+    float:left;
+    display: block;
+    width: 25%;
+    margin-right: 14%;
+    margin-left: 13%;
+    margin-top: 80px;
+    animation-name: buttonAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+button:hover{
+    background-color: #427a80;
+    border: 3px solid black;
+    padding: 12px;
 }
 #mainDiv{
     margin: auto;
     width: 90%;
-    border: 5px double black;
+    border: 10px double black;
     background-color:darkgray;
     padding: 10px;
+    overflow: auto;
 }
-#balanceText{
+p{
     color: white;
     background-color: #808080;
     padding: 5px;
     font-family:monospace;
     font-size: 10pt;
     border-style: outset;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 90%;
+}
+h2{
+    color: white;
+    background-color: #2f474a;
+    padding: 10px;
+    font-family:monospace;
+    font-size: 40pt;
+    border-style:dashed;
+    border-color: darkgray;
+    text-align: center;
+    border-radius: 40px;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 480px;
+}
+h1{
+    color: white;
+    background-color: #2f474a;
+    padding: 10px;
+    font-family:monospace;
+    font-size: 50pt;
+    border-style:dashed;
+    border-color: darkgray;
+    text-align: center;
+    border-radius: 40px;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 580px;
+}
+.buttonImageCombo{
+    overflow: auto;
+    margin: auto;
+    margin-bottom: 20px;
+}
+#balanceImage{
+    float:left;
+    display: block;
+    width: 40%;
+    border: 5px outset grey;
+    border-radius: 10px;
 }

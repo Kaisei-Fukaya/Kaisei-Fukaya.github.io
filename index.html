@@ -18,16 +18,27 @@
             <button id="balanceButton">Play Balance</button>
             <img id="balanceImage" src="img/screenshotLarge.jpg"></img>
         </div>
-        <h2>Project</h2>
-        <p>Project text</p>
+        <h2>Map Generating Autoencoder</h2>
+        <p>This project was the subject of my dissertation. <br> It uses an autoencoder trained on real-world map data to generate satellite style images based on layouts you create.</p>
+        <div class="buttonImageCombo">
+            <button id="mapaeButton">Download Demo</button>
+            <img id="mapaeImage" src="img/mapae.PNG"></img>
+        </div>
     </div>
 
 </body>
     <script>
         document.getElementById("balanceButton").onclick = LoadGame;
+        document.getElementById("mapaeButton").onclick = LoadGame2;
         function LoadGame(){
 //            document.location.href="/balance_game/index.html";
             window.open("/balance_game/index.html", "JS13K Balance");
         }
+        
+        function LoadGame2(){
+            //window.open("/balance_game/index.html", "JS13K Balance");
+            window.location="https://drive.google.com/open?id=1O5CUsZBZrdDH48vZ4tuBU6AQ2bwiWB6k";
+        }
+        
     </script>
 </html>

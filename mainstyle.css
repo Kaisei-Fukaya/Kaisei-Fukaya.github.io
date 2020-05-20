@@ -2,8 +2,9 @@ body{
     background-color: dimgray;
 }
 @keyframes buttonAnim{
-    0% {border-style: outset;}
-    50% {border-style: inset; border-color: white}
+    0% {border-color: grey;}
+    50% {border-color: #cccccc;}
+    100% {border-color: grey;}
 }
 button{
     color: white;
@@ -21,7 +22,7 @@ button{
     margin-left: 13%;
     margin-top: 80px;
     animation-name: buttonAnim;
-    animation-duration: 2s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
 }
 button:hover{
@@ -31,7 +32,7 @@ button:hover{
 }
 #mainDiv{
     margin: auto;
-    width: 90%;
+    width: 50em;
     border: 10px double black;
     background-color:darkgray;
     padding: 10px;
@@ -41,6 +42,7 @@ p{
     color: white;
     background-color: #808080;
     padding: 5px;
+    line-height: 1.5em;
     font-family:monospace;
     font-size: 10pt;
     border-style: outset;
@@ -82,6 +84,14 @@ h1{
     margin-bottom: 20px;
 }
 #balanceImage{
+    float:left;
+    display: block;
+    width: 40%;
+    border: 5px outset grey;
+    border-radius: 10px;
+}
+
+#mapaeImage{
     float:left;
     display: block;
     width: 40%;

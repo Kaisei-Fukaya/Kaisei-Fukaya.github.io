@@ -98,3 +98,67 @@ h1{
     border: 5px outset grey;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 900px) {
+
+        #mainDiv{
+        margin: auto;
+        width: 90%;
+        border: 10px double black;
+        background-color:darkgray;
+        padding: 10px;
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 700px){
+    
+    h1{
+        color: white;
+        background-color: #2f474a;
+        padding: 10px;
+        font-family:monospace;
+        font-size: 30pt;
+        border-style:dashed;
+        border-color: darkgray;
+        text-align: center;
+        border-radius: 40px;
+        margin: auto;
+        margin-bottom: 30px;
+        width: 90%;
+    }
+    h2{
+        color: white;
+        background-color: #2f474a;
+        padding: 10px;
+        font-family:monospace;
+        font-size: 20pt;
+        border-style:dashed;
+        border-color: darkgray;
+        text-align: center;
+        border-radius: 40px;
+        margin: auto;
+        margin-bottom: 30px;
+        width: 90%;
+    }
+    
+    button{
+        color: white;
+        background-color: darkslategrey;
+        padding: 10px;
+        font-family:monospace;
+        font-size: 13pt;
+        border-style: outset;
+        border: 5px outset grey;
+        border-radius: 10px;
+        float:left;
+        display: block;
+        width: 25%;
+        margin-right: 14%;
+        margin-left: 13%;
+        margin-top: 80px;
+        animation-name: buttonAnim;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+    }
+}

@@ -1,0 +1,98 @@
+body{
+    background-color: black;
+}
+
+h1{
+    font-family: monospace;
+    color: aliceblue;
+    font-size: 3em;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.collapsible{
+    color: aliceblue;
+    background-color: gray;
+    margin: auto;
+    width: 100%;
+    display: block;
+    max-width: 200px;
+    transition: max-width 0.2s ease-out;
+}
+
+.content{
+    transition: max-height 0.2s ease-out;
+    transition-delay: .2s;
+    /*transition: max-width 0.2s ease-out;
+    transition-delay: .2s;*/
+    overflow: hidden;
+    max-height: 0;
+}
+
+.optionPanel{
+    
+}
+
+#inputPanel{
+    font-family: sans-serif;
+    color: aliceblue;
+    background-color: rgba(40, 5, 20, 0.8);
+    width: 500px;
+    height: 250px;
+    margin: auto;
+}
+
+#outputPanel{
+    color: navajowhite;
+    font-family: monospace;
+    position: fixed;
+    z-index: -1;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    right: 0;
+    top: 40%;
+}   
+
+#outputText{
+    color: navajowhite;
+    display: none;
+    background-color: rgba(100, 50, 120, 0.4);
+    font-family: sans-serif;
+    width: 400px;
+    margin: auto;
+    padding-left: 100px;
+}
+
+#outputChordsText{
+    text-align: center;
+    letter-spacing: 0.03em;
+    word-spacing: 0.5em;
+    font-size: 40px;
+}
+
+#outputChordsNumeralsText{
+    text-align: center;
+    letter-spacing: 0.03em;
+    word-spacing: 1.3em;
+    font-size: 26px;
+}
+
+.optionDescription{
+    width: 50%;
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.optionInput{
+    width: 20%;
+    display: inline-block;
+    height: 30px;
+    margin: auto;
+    top: 50%;
+}

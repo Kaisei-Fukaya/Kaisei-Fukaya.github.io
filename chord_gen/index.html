@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, 
+    user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link href="css/mainstyle.css" rel="stylesheet" />
+</head>
+
+    
+<body>
+    
+    <h1>Chordinator</h1>
+    <button class="collapsible">Options</button>
+    <div id="inputPanel" class="content">
+        <div class="optionPanel">
+            <p class="optionDescription">Generate Chord Progression</p>
+            <button class="optionInput" onclick="GenerateResult()">
+                Generate
+            </button>
+        </div>
+        <div class="optionPanel">
+            <p class="optionDescription">Progression Length</p>
+            <input class="optionInput" id="pLengthInput" type="number" min="1" max="10" value="4">
+        </div>
+        <div class="optionPanel">
+            <p class="optionDescription">Include Diminished Chords</p>
+            <input type="checkbox" class="optionInput" id="pIncDimInput" value="true">
+        </div>
+        <div class="optionPanel">
+            <p class="optionDescription" >Key</p>
+            <input type="checkbox" class="optionInput" id="pUseKeyInput" value="true">
+            <select id="pKeyInput" class="optionInput">
+                <option value=0>C</option>
+                <option value=1>Db</option>
+                <option value=2>D</option>
+                <option value=3>Eb</option>
+                <option value=4>E</option>
+                <option value=5>F</option>
+                <option value=6>Gb</option>
+                <option value=7>G</option>
+                <option value=8>Ab</option>
+                <option value=9>A</option>
+                <option value=10>Bb</option>
+                <option value=11>B</option>
+            </select>
+        </div>
+    </div>
+    <div id="outputPanel">
+        <p id="outputText">Something</p>
+        <h2 id="outputChordsText">C Dm Em F G Am Bdim</h2>
+        <h2 id="outputChordsNumeralsText">I ii iii IV V vi vii<sup>o</sup></h2>
+    </div>
+
+
+</body>
+<script src="js/main.js"></script>
+</html>

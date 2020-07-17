@@ -5,7 +5,7 @@ var useKeyInput = document.getElementById("pUseKeyInput");
 var keyInput = document.getElementById("pKeyInput");
 
 //Output Elements
-var outputElement = document.getElementById("outputText");
+var outputKeyElement = document.getElementById("outputKeyText");
 var outputChordsElement = document.getElementById("outputChordsText");
 var outputNumeralElement = document.getElementById("outputChordsNumeralsText");
 
@@ -18,18 +18,34 @@ for (var i = 0; i < collapsibles.length; i++){
     collapsibles[i].addEventListener("click", function(){
         this.classList.toggle("active");
         var content = this.nextElementSibling;
-        if(content.style.maxHeight){
-            content.style.maxHeight = null;
-            content.style.maxWidth = 200 + "px";
-            this.style.maxWidth = 200 + "px";
+        if(content.style.maxWidth){
+            content.style.maxWidth = null;
+            //content.style.maxWidth = 200 + "px";
+            //this.style.maxWidth = 200 + "px";
         }else{
-            content.style.maxHeight = content.scrollHeight + "px";
-            content.style.maxWidth = 500 + "px";
-            this.style.maxWidth = 500 + "px";
+            content.style.maxWidth = /*content.scrollWidth*/300 + "px";
+            //content.style.maxWidth = 500 + "px";
+            //this.style.maxWidth = 500 + "px";
         }
     });
 }
 
+//Handle keyboard inputs
+window.addEventListener("keydown", function(event){
+    if(event.defaultPrevented){
+        return;
+    }
+    //console.log("key detected");
+    switch(event.code){
+        case "Space":
+            GenerateResult();
+            break;
+    }
+    
+    event.preventDefault();
+}, true);
+
+//Main Code
 function GenerateResult(){
     //Generate Key
     var keyVal = 0;
@@ -40,7 +56,7 @@ function GenerateResult(){
         keyVal = parseInt(keyInput.value);
     }
     var genKey = notes[keyVal];
-    var outputText = "Key: " + genKey + "<br>";
+    var outputKeyText = genKey.toString();
     var chordsKeyRelativeText = "";
     var chordsNumeralText = "";
     
@@ -71,13 +87,12 @@ function GenerateResult(){
     }
     
     //Write Chords Relative to Key
-    outputText += chordsNumeralText+"<br>";
     for (var i = 0; i < progression.length; i++){
         chordsKeyRelativeText += GetKeyRelativeDiatonic(keyVal, progression[i]) + " ";
     }
-    outputText += chordsKeyRelativeText;
     
-    outputElement.innerHTML = outputText;
+    outputKeyElement.innerHTML = outputKeyText;
+    //console.log(outputKeyElement.innerHTML);
     outputChordsElement.innerHTML = chordsKeyRelativeText;
     outputNumeralElement.innerHTML = chordsNumeralText;
 }

@@ -7,13 +7,16 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <link href="css/mainstyle.css" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/b1e240369e.js" crossorigin="anonymous"></script>
+
 </head>
 
     
 <body>
     
     <h1>Chordinator</h1>
-    <button class="collapsible">Options</button>
+    <button class="collapsible" id="optionsButton"><i class="fas fa-cog"></i></button>
+    
     <div id="inputPanel" class="content">
         <div class="optionPanel">
             <p class="optionDescription">Generate Chord Progression</p>
@@ -49,9 +52,10 @@
         </div>
     </div>
     <div id="outputPanel">
-        <p id="outputText">Something</p>
+        <p id="outputKeyParentText">Key<br><span id="outputKeyText">C</span></p>
         <h2 id="outputChordsText">C Dm Em F G Am Bdim</h2>
         <h2 id="outputChordsNumeralsText">I ii iii IV V vi vii<sup>o</sup></h2>
+        <button id="generateButton" onclick="GenerateResult()"><i class="far fa-lightbulb"></i></button>
     </div>
 
 

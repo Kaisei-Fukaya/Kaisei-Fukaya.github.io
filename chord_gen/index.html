@@ -19,12 +19,6 @@
     
     <div id="inputPanel" class="content">
         <div class="optionPanel">
-            <p class="optionDescription">Generate Chord Progression</p>
-            <button class="optionInput" onclick="GenerateResult()">
-                Generate
-            </button>
-        </div>
-        <div class="optionPanel">
             <p class="optionDescription">Progression Length</p>
             <input class="optionInput" id="pLengthInput" type="number" min="1" max="10" value="4">
         </div>
@@ -35,7 +29,7 @@
         <div class="optionPanel">
             <p class="optionDescription" >Key</p>
             <input type="checkbox" class="optionInput" id="pUseKeyInput" value="true">
-            <select id="pKeyInput" class="optionInput">
+            <select id="pKeyInput" class="optionInput" onchange="KeyChanged(this.value)">
                 <option value=0>C</option>
                 <option value=1>Db</option>
                 <option value=2>D</option>

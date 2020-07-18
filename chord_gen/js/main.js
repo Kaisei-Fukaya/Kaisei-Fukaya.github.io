@@ -46,27 +46,48 @@ window.addEventListener("keydown", function(event){
 }, true);
 
 //Main Code
+var chordsKeyRelativeText = "";
+var chordsNumeralText = "";
+var progression = [];
+var keyVal = 0;
+
 function GenerateResult(){
     //Generate Key
-    var keyVal = 0;
+    keyVal = 0;
     if(!useKeyInput.checked){
         keyVal = Math.floor(Math.random() * notes.length);
     }
     else{
         keyVal = parseInt(keyInput.value);
     }
-    var genKey = notes[keyVal];
-    var outputKeyText = genKey.toString();
-    var chordsKeyRelativeText = "";
-    var chordsNumeralText = "";
+    //chordsKeyRelativeText = "";
+    chordsNumeralText = "";
+    
+    SetKey(keyVal);
     
     //Generate Progression
-    var progLength = progressionLengthInput.value;
-    var progression = [progLength];
-    var lastChord;
+    progression = new Array(parseInt(progressionLengthInput.value));
     
     //Write Chords
-    for (var i = 0; i < progLength; i++){
+    GenProgression();
+    
+    //Write Chords Relative to Key
+    WriteKeySpecificChords();
+    
+    //console.log(outputKeyElement.innerHTML);
+    outputNumeralElement.innerHTML = chordsNumeralText;
+}
+
+function SetKey(setKeyVal){
+    var outputKeyText = notes[setKeyVal].toString();
+    outputKeyElement.innerHTML = outputKeyText;
+    keyVal = setKeyVal;
+    //console.log(keyVal);
+}
+
+function GenProgression(){
+    var lastChord;
+    for (var i = 0; i < progression.length; i++){
         //Audition new chord
         var auditioning = true;
         var chosenChord;
@@ -85,16 +106,16 @@ function GenerateResult(){
         chordsNumeralText += GetNumeral(chosenChord) + " ";
         lastChord = chosenChord;
     }
-    
-    //Write Chords Relative to Key
+}
+
+function WriteKeySpecificChords(){
+    chordsKeyRelativeText = "";
     for (var i = 0; i < progression.length; i++){
         chordsKeyRelativeText += GetKeyRelativeDiatonic(keyVal, progression[i]) + " ";
+        //console.log("keyval: "+keyVal);
     }
-    
-    outputKeyElement.innerHTML = outputKeyText;
-    //console.log(outputKeyElement.innerHTML);
     outputChordsElement.innerHTML = chordsKeyRelativeText;
-    outputNumeralElement.innerHTML = chordsNumeralText;
+    //console.log("2");
 }
 
 function GetRandomDiatonicChord(){
@@ -161,15 +182,24 @@ function GetKeyRelativeDiatonic(key, chordNum){
             outChord = notes[WrapVal(key + 11)] + "dim";
             break;
     }
+    //console.log("Key: "+key + " chordnum: " + chordNum);
     return outChord;
 }
 
 function WrapVal(index){
-    var outIndex;
+    var outIndex = "";
     if(index > notes.length-1){
         outIndex = index - notes.length;
     }else{
         outIndex = index;
     }
+    //console.log("wrapval: "+outIndex + " inputindex: "+index);
     return outIndex;
+}
+
+function KeyChanged(k){
+    if(chordsKeyRelativeText != ""){
+        SetKey(parseInt(k));
+        WriteKeySpecificChords();
+    }
 }

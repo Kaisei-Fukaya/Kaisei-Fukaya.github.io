@@ -39,22 +39,22 @@ window.addEventListener("keydown", function(event){
     switch(event.code){
         case "Space":
             GenerateResult();
+            event.preventDefault();
             break;
     }
     
-    event.preventDefault();
 }, true);
 
 //Main Code
 var chordsKeyRelativeText = "";
 var chordsNumeralText = "";
-var progression = [];
+var progression = [0,1,2,3,4,5,6];
 var keyVal = 0;
 
 function GenerateResult(){
     //Generate Key
     keyVal = 0;
-    if(!useKeyInput.checked){
+    if(useKeyInput.checked){
         keyVal = Math.floor(Math.random() * notes.length);
     }
     else{
@@ -198,8 +198,6 @@ function WrapVal(index){
 }
 
 function KeyChanged(k){
-    if(chordsKeyRelativeText != ""){
-        SetKey(parseInt(k));
-        WriteKeySpecificChords();
-    }
+    SetKey(parseInt(k));
+    WriteKeySpecificChords();
 }

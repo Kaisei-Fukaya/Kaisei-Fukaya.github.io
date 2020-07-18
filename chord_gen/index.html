@@ -14,21 +14,26 @@
     
 <body>
     
-    <h1>Chordinator</h1>
+    <h1>Diagen</h1>
     <button class="collapsible" id="optionsButton"><i class="fas fa-cog"></i></button>
     
     <div id="inputPanel" class="content">
+        <div id="optionCollection">
         <div class="optionPanel">
-            <p class="optionDescription">Progression Length</p>
-            <input class="optionInput" id="pLengthInput" type="number" min="1" max="10" value="4">
+            <p class="optionDescription" id="progLengthDesc">Progression Length</p>
+            <input class="optionInput" id="pLengthInput" type="range" min="1" max="10" value="4">
         </div>
         <div class="optionPanel">
             <p class="optionDescription">Include Diminished Chords</p>
             <input type="checkbox" class="optionInput" id="pIncDimInput" value="true">
         </div>
         <div class="optionPanel">
+            <p class="optionDescription" >Randomise Key</p>
+            <input type="checkbox" class="optionInput" id="pUseKeyInput" value="1" checked>
+
+        </div>
+        <div class="optionPanel">
             <p class="optionDescription" >Key</p>
-            <input type="checkbox" class="optionInput" id="pUseKeyInput" value="true">
             <select id="pKeyInput" class="optionInput" onchange="KeyChanged(this.value)">
                 <option value=0>C</option>
                 <option value=1>Db</option>
@@ -44,12 +49,14 @@
                 <option value=11>B</option>
             </select>
         </div>
+        </div>
     </div>
     <div id="outputPanel">
         <p id="outputKeyParentText">Key<br><span id="outputKeyText">C</span></p>
         <h2 id="outputChordsText">C Dm Em F G Am Bdim</h2>
         <h2 id="outputChordsNumeralsText">I ii iii IV V vi vii<sup>o</sup></h2>
         <button id="generateButton" onclick="GenerateResult()"><i class="far fa-lightbulb"></i></button>
+        <div id="genButtonTooltip">Generate new progression! <br> [or press "space"]</div>
     </div>
 
 

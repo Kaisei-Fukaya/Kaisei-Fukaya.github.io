@@ -74,7 +74,7 @@ h1{
     color: aliceblue;
     background-color: rgba(40, 5, 20, 0.8);
     width: 500px;
-    height: 250px;
+    height: 330px;
     margin: auto;
     position: fixed;
     right: 0;
@@ -178,6 +178,15 @@ h1{
 #pKeyInput{
     width: 50px;
     outline: 0;
+}
+
+#pModeInput{
+    width: 100px;
+    outline: 0;
+}
+
+#modeOptionText{
+    width: 54%;
 }
 
 #generateButton{

@@ -19,36 +19,48 @@
     
     <div id="inputPanel" class="content">
         <div id="optionCollection">
-        <div class="optionPanel">
-            <p class="optionDescription" id="progLengthDesc">Progression Length</p>
-            <input class="optionInput" id="pLengthInput" type="range" min="1" max="10" value="4">
-        </div>
-        <div class="optionPanel">
-            <p class="optionDescription">Include Diminished Chords</p>
-            <input type="checkbox" class="optionInput" id="pIncDimInput" value="true">
-        </div>
-        <div class="optionPanel">
-            <p class="optionDescription" >Randomise Key</p>
-            <input type="checkbox" class="optionInput" id="pUseKeyInput" value="1" checked>
+            <div class="optionPanel">
+                <p class="optionDescription" id="progLengthDesc">Progression Length</p>
+                <input class="optionInput" id="pLengthInput" type="range" min="1" max="10" value="4">
+            </div>
+            <div class="optionPanel">
+                <p class="optionDescription">Include Diminished Chords</p>
+                <input type="checkbox" class="optionInput" id="pIncDimInput" value="true">
+            </div>
+            <div class="optionPanel">
+                <p class="optionDescription" >Randomise Key</p>
+                <input type="checkbox" class="optionInput" id="pUseKeyInput" value="1" checked>
 
-        </div>
-        <div class="optionPanel">
-            <p class="optionDescription" >Key</p>
-            <select id="pKeyInput" class="optionInput" onchange="KeyChanged(this.value)">
-                <option value=0>C</option>
-                <option value=1>Db</option>
-                <option value=2>D</option>
-                <option value=3>Eb</option>
-                <option value=4>E</option>
-                <option value=5>F</option>
-                <option value=6>Gb</option>
-                <option value=7>G</option>
-                <option value=8>Ab</option>
-                <option value=9>A</option>
-                <option value=10>Bb</option>
-                <option value=11>B</option>
-            </select>
-        </div>
+            </div>
+            <div class="optionPanel">
+                <p class="optionDescription" >Key</p>
+                <select id="pKeyInput" class="optionInput" onchange="KeyChanged(this.value)">
+                    <option value=0>C</option>
+                    <option value=1>Db</option>
+                    <option value=2>D</option>
+                    <option value=3>Eb</option>
+                    <option value=4>E</option>
+                    <option value=5>F</option>
+                    <option value=6>Gb</option>
+                    <option value=7>G</option>
+                    <option value=8>Ab</option>
+                    <option value=9>A</option>
+                    <option value=10>Bb</option>
+                    <option value=11>B</option>
+                </select>
+            </div>
+            <div class="optionPanel">
+                <p class="optionDescription" id="modeOptionText">Mode</p>
+                <select id="pModeInput" class="optionInput" onchange="ModeChanged(this.value)">
+                    <option value=0>Ionian</option>
+                    <option value=1>Dorian</option>
+                    <option value=2>Phrygian</option>
+                    <option value=3>Lydian</option>
+                    <option value=4>Mixolydian</option>
+                    <option value=5>Aeolian</option>
+                    <option value=6>Locrian</option>
+                </select>
+            </div>
         </div>
     </div>
     <div id="outputPanel">

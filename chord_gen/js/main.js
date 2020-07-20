@@ -51,6 +51,8 @@ var chordsNumeralText = "";
 var progression = [0,1,2,3,4,5,6];
 var keyVal = 0;
 var modeVal = 0;
+var modeText = "Major (Ionian)";
+
 
 function GenerateResult(){
     //Generate Key
@@ -81,14 +83,40 @@ function GenerateResult(){
 }
 
 function SetKey(setKeyVal){
-    var outputKeyText = notes[setKeyVal].toString();
-    outputKeyElement.innerHTML = outputKeyText;
     keyVal = setKeyVal;
-    //console.log(keyVal);
+    outputKeyElement.innerHTML = KeyToText() + " <span style='font-size: 1ex'>" + modeText + "</span>";
 }
 
 function SetMode(setModeVal){
     modeVal = setModeVal;
+    switch(modeVal){
+        case 0:
+            modeText = "Major (Ionian)";
+            break;
+        case 1:
+            modeText = "Dorian";
+            break;
+        case 2:
+            modeText = "Phrygian";
+            break;
+        case 3:
+            modeText = "Lydian";
+            break;
+        case 4:
+            modeText = "Mixolydian";
+            break;
+        case 5:
+            modeText = "Minor (Aeolian)";
+            break;
+        case 6:
+            modeText = "Locrian";
+            break;
+    }
+    outputKeyElement.innerHTML = KeyToText() + " <span style='font-size: 1ex'>" + modeText + "</span>";
+}
+
+function KeyToText(){
+    return out = notes[keyVal].toString();
 }
 
 function GenProgression(){

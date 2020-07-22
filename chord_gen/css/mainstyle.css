@@ -8,7 +8,7 @@ h1{
     color: aliceblue;
     font-size: 34pt;
     margin: auto;
-    width: 50%;
+    width: 70%;
     text-align: center;
     margin-top: 2%;
 }
@@ -252,6 +252,10 @@ h1{
     #genButtonTooltip{
         display: none;
     }
+    
+    h1{
+        font-size: 28pt;
+    }
 }
 @media screen and (max-height: 430px){
     
@@ -261,6 +265,10 @@ h1{
 
     #genButtonTooltip{
         display: none;
+    }
+    
+    h1{
+        font-size: 20pt;
     }
 }
 /*

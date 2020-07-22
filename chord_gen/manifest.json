@@ -1,0 +1,12 @@
+{
+  "name": "Chord Generator",
+  "short_name": "CGen",
+  "display": "standalone",
+  "background_color": "#8a8a8a",
+  "description": "A simple chord progression generator",
+  "icons": [{
+    "src": "img/icon.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }]
+}

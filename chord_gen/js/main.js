@@ -12,6 +12,8 @@ var outputNumeralElement = document.getElementById("outputChordsNumeralsText");
 //Constants
 const notes = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
 
+const notesSharps = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+
 //Handle expandable menu
 var collapsibles = document.getElementsByClassName("collapsible");
 for (var i = 0; i < collapsibles.length; i++){

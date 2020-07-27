@@ -175,6 +175,16 @@ h1{
     border-radius: 5px;
 }
 
+#progLengthNumber{
+    color: rgb(200,200,200);
+    position: absolute;
+    left: 103px;
+    top: 32px;
+    font-family: sans-serif;
+    font-weight: 500;
+    pointer-events: none;
+}
+
 
 #optionCollection{
     margin: 0;

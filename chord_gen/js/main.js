@@ -47,6 +47,49 @@ window.addEventListener("keydown", function(event){
     
 }, true);
 
+
+//Handle progression length number
+var slider = document.getElementById("pLengthInput"),
+    sliderNumber = document.getElementById("progLengthNumber");
+
+slider.oninput = function(){
+    sliderNumber.innerHTML = this.value;
+    var leftVal = 20;
+    switch(parseInt(this.value)){
+        case 1:
+            leftVal = 20;
+            break;
+        case 2:
+            leftVal = 48;
+            break;
+        case 3:
+            leftVal = 77;
+            break;
+        case 4:
+            leftVal = 103;
+            break;
+        case 5:
+            leftVal = 132;
+            break;
+        case 6:
+            leftVal = 159;
+            break;
+        case 7:
+            leftVal = 188;
+            break;
+        case 8:
+            leftVal = 215;
+            break;
+        case 9:
+            leftVal = 242;
+            break;
+        case 10:
+            leftVal = 266;
+            break;
+    }
+    sliderNumber.style.left = leftVal + "px";
+}
+
 //Main Code
 var chordsKeyRelativeText = "";
 var chordsNumeralText = "";

@@ -9,27 +9,136 @@
 	<link href="mainstyle.css" rel="stylesheet" />
 </head>
 <body>
+    <div id="sideDivL"></div>
+    <div id="sideDivR"></div>
     <div id="mainDiv">
         <h1>Kaisei Fukaya</h1>
+        
         <p>Welcome to my GitHub web page. This will act as a hub for all of my web based projects.</p>
-        <h2>Balance</h2>
-        <p id="balanceText">Balance is an entry for the 2018 JS13K Game Jam.<br></p>
-        <div class="buttonImageCombo">
-            <button id="balanceButton">Play Balance</button>
-            <img id="balanceImage" src="img/screenshotLarge.jpg"></img>
-        </div>
-        <h2>Map Generating Autoencoder</h2>
-        <p>This project was the subject of my dissertation. <br> It uses an autoencoder trained on real-world map data to generate satellite style images based on layouts you create.</p>
-        <div class="buttonImageCombo">
-            <button id="mapaeButton">Download Demo</button>
-            <img id="mapaeImage" src="img/mapae.PNG"></img>
-        </div>
-    </div>
+        
+        <p>Check out some of my projects on <a href="https://kaiseidev.itch.io/">Itch.io</a> where I occasionally take part in Game Jams and release my games.</p>
 
+        <div id="itchContainer">
+            <div class="projItem">
+
+            </div>
+            <div class="projItem">
+
+            </div>
+            <div class="projItem"></div>
+            <div class="projItem"></div>
+        </div>
+    
+        <p></p>
+    
+        
+        <h2>Projects</h2>
+        
+        <div class="gridParent">
+            
+            <div class="projItem">
+                <img class="projItemImg collapsible" src="img/cover.PNG" data-identifier="1"></img>
+            </div>
+        
+            <div class="projItem">
+                <img class="projItemImg collapsible" src="img/mapae.PNG" data-identifier="2"></img>
+            </div>
+        
+            <div class="projItem">
+                <img class="projItemImg collapsible" src="img/coveryonder.png" data-identifier="3"></img>
+            </div>
+        
+            <div class="projItem">
+                <img class="projItemImg collapsible" src="img/mainIMage.png" data-identifier="4"></img>
+            </div>
+
+            <div class="projItem">
+                <img class="projItemImg collapsible" src="img/chordsImg.PNG" data-identifier="5"></img>
+            </div>
+
+            <div class="projItem">
+                <img class="projItemImg collapsible" src="img/mainIMage.png" data-identifier="6"></img>
+            </div>
+
+            <div class="projItem">
+                <img class="projItemImg collapsible" src="img/mainIMage.png" data-identifier="7"></img>
+            </div>
+
+            <div class="projItem">
+                <img class="projItemImg collapsible" src="img/mainIMage.png" data-identifier="8"></img>
+            </div>
+        
+        </div>
+        
+        <div class="content" data-identifier="1">
+            <p>some textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome text</p>
+            
+        </div>
+        <div class="content" data-identifier="2">
+            <p>This project was the subject of my dissertation. <br> It uses an autoencoder trained on real-world map data to generate satellite style images based on layouts you create.</p>
+        </div>
+        <div class="content" data-identifier="3"><p></p>
+            <iframe frameborder="0" src="https://itch.io/embed/767947?border_width=3&amp;bg_color=639391&amp;fg_color=efefef&amp;link_color=008cc9&amp;border_color=004a6a" width="100%" height="171"><a href="https://kaiseidev.itch.io/yonder">Yonder by Kaisei Dev</a>
+            </iframe>
+            <img src="img/yondergif2.gif" class="gif"></img>
+        </div>
+        <div class="content" data-identifier="4"><p></p>
+            <iframe frameborder="0" src="https://itch.io/embed/760482?border_width=3&amp;dark=true" width="100%" height="171"><a href="https://kaiseidev.itch.io/roots-of-all-evil">Roots of all Evil by Kaisei Dev</a>
+            </iframe>
+        </div>
+
+        <div class="content" data-identifier="5">
+            <p>Want to make some music but lacking inspiration? Use this web app to generate chord progressions in any key or mode you choose. <br><br>I decided to make this generator as a way to practice and break out of certain playing habits. It was also a great excuse to learn how to put together a web app using a Web App Manifest, and sharpen up my JavaScript and CSS.</p>
+            
+            <button id="chordGenButton">Try Me</button>
+        </div>
+        <div class="content" data-identifier="6">
+            <p>This project was the subject of my dissertation. <br> It uses an autoencoder trained on real-world map data to generate satellite style images based on layouts you create.</p>
+        </div>
+        <div class="content" data-identifier="7"><p></p>                <iframe frameborder="0" src="https://itch.io/embed/767947?border_width=3&amp;bg_color=639391&amp;fg_color=efefef&amp;link_color=008cc9&amp;border_color=004a6a" width="100%" height="171"><a href="https://kaiseidev.itch.io/yonder">Yonder by Kaisei Dev</a>
+                </iframe></div>
+        <div class="content" data-identifier="8"><p></p>                <iframe frameborder="0" src="https://itch.io/embed/760482?border_width=3&amp;dark=true" width="100%" height="171"><a href="https://kaiseidev.itch.io/roots-of-all-evil">Roots of all Evil by Kaisei Dev</a>
+        </iframe>
+        </div>
+
+        </div>
+
+    <footer>
+        <a href="https://kaiseidev.itch.io/">Itch.io account</a>
+        <a href="https://github.com/Kaisei-Fukaya">Github</a>
+        <a href="https://kaiseidev.itch.io/">Youtube</a>
+        <a href="https://www.linkedin.com/in/kaisei-fukaya-7250a6173/">LinkedIn</a>
+    </footer>
 </body>
     <script>
-        document.getElementById("balanceButton").onclick = LoadGame;
-        document.getElementById("mapaeButton").onclick = LoadGame2;
+        //Handle expandable menu
+        var collapsibles = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < collapsibles.length; i++){
+            collapsibles[i].addEventListener("click", function(){
+                this.classList.toggle("active");
+                var contents = document.getElementsByClassName("content");
+                this.style.outlineStyle = "dotted";
+                for(var i = 0; i < contents.length; i++)
+                {
+                    if(contents[i].dataset.identifier == this.dataset.identifier)
+                    {
+                        var content = contents[i];
+                        content.style.maxHeight = /*content.scrollWidth*/100 + "%";
+                        console.log("opened " + content.dataset.identifier)
+                    }
+                    else
+                    {
+                        contents[i].style.maxHeight = null;
+                        collapsibles[i].style.outlineStyle = "none";
+                    }
+                }
+
+            });
+        }
+        
+        document.getElementById("chordGenButton").addEventListener("click", function(){window.open("chord_gen/index.html")});
+        //document.getElementById("balanceButton").onclick = LoadGame;
+        //document.getElementById("mapaeButton").onclick = LoadGame2;
         function LoadGame(){
 //            document.location.href="/balance_game/index.html";
             window.open("/balance_game/index.html", "JS13K Balance");

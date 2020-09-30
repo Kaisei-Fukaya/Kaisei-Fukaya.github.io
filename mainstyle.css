@@ -2,6 +2,15 @@ body{
     background-color: #0D1821;
     font-family:monospace;
 }
+audio{
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 15px;
+}
+audio:focus{
+    outline: none;
+}
 #mainDiv{
     display: block;
     margin: auto;
@@ -38,6 +47,13 @@ body{
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+.subheading{
+    font-size: 15pt;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
 }
 footer{
     padding: 2em;
@@ -92,6 +108,7 @@ h1{
     margin: auto;
     margin-bottom: 30px;
     width: 580px;
+    line-height: 30pt;
 }
 .projItem{
     overflow: none;
@@ -102,7 +119,7 @@ h1{
 }
 .gridParent{
     display: grid;
-    width: 80%;
+    width: 100%;
     margin: auto;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: auto;
@@ -123,11 +140,12 @@ h1{
     margin: auto;
 }
 .content{
-    width: 80%;
+    width: 100%;
     max-height: 0;
     margin: auto;
     padding: 0;
     overflow: hidden;
+    text-align: justify;
 /*    transition: max-height 0.2s ease-out;*/
 }
 
@@ -136,4 +154,28 @@ h1{
     border: solid 3px #004a6a;
     width: 320px;
     margin: auto;
+}
+
+.audioCaption{
+    font-size: 10pt;
+    padding: 0;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+
+#waterGif{
+    width: 95%;
+    height: auto;
+    border: none;
+    box-shadow: 2px 3px 3px 1px #050c11;
+}
+
+@media screen and (max-width:900px){
+    #sideDivR{
+        display: none;
+    }
+    #sideDivL{
+        display: none;
+    }
 }

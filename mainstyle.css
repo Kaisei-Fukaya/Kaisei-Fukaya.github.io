@@ -121,7 +121,7 @@ h1{
     display: grid;
     width: 100%;
     margin: auto;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(3, 33%);
     grid-template-rows: auto;
     grid-gap: 0px;
     overflow: none;
@@ -132,6 +132,7 @@ h1{
     max-height: 100%;
     display: inline-block;
     outline-color: white;
+    outline-width: medium;
     box-shadow: 2px 3px 3px 1px #050c11;
 }
 
@@ -169,6 +170,16 @@ h1{
     height: auto;
     border: none;
     box-shadow: 2px 3px 3px 1px #050c11;
+}
+iframe{
+    display: block;
+    margin: auto;
+}
+#procGenIdeasImg{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
 }
 
 @media screen and (max-width:900px){

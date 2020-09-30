@@ -16,7 +16,7 @@
         
         <p>Welcome to my GitHub web page. This will act as a hub for all of my web based projects.</p>
         
-        <p>Check out some of my projects on <a href="https://kaiseidev.itch.io/">Itch.io</a> where I occasionally take part in Game Jams and release my games.</p>
+        <p>Check out some of my projects on <a href="https://kaiseidev.itch.io/" target="_blank">Itch.io</a> where I occasionally take part in Game Jams and release my games.</p>
 
         <div id="itchContainer">
             <div class="projItem">
@@ -123,12 +123,14 @@
 
         <div class="content" data-identifier="7">
             <p></p>
-            <iframe width="560" height="315" margin="auto" src="https://www.youtube.com/embed/lqwYQ9UmAdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lqwYQ9UmAdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="files/MLStates%20Agents%20Evaluation.pdf" target="_blank">Read More</a>
             
         </div>
 
         <div class="content" data-identifier="8">
             <p></p>
+            <img id="procGenIdeasImg" src="img/ProcGenIdeas.png"></img>
         </div>
 
         </div>
@@ -147,7 +149,7 @@
             collapsibles[i].addEventListener("click", function(){
                 this.classList.toggle("active");
                 var contents = document.getElementsByClassName("content");
-                this.style.outlineStyle = "dotted";
+                this.style.outlineStyle = "solid";
                 for(var i = 0; i < contents.length; i++)
                 {
                     if(contents[i].dataset.identifier == this.dataset.identifier)

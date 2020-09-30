@@ -132,7 +132,7 @@ h1{
     max-height: 100%;
     display: inline-block;
     outline-color: white;
-    outline-width: medium;
+    outline-width: thin;
     box-shadow: 2px 3px 3px 1px #050c11;
 }
 

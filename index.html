@@ -9,8 +9,8 @@
 	<link href="mainstyle.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="sideDivL"></div>
-    <div id="sideDivR"></div>
+    <div id="sideDivL">sdsdsd</div>
+    <div id="sideDivR">sdsdsd</div>
     <div id="mainDiv">
         <h1>Kaisei Fukaya</h1>
         
@@ -57,7 +57,7 @@
             </div>
 
             <div class="projItem">
-                <img class="projItemImg collapsible" src="img/mainIMage.png" data-identifier="6"></img>
+                <img class="projItemImg collapsible" src="img/waterIcon.png" data-identifier="6"></img>
             </div>
 
             <div class="projItem">
@@ -80,6 +80,7 @@
         <div class="content" data-identifier="3"><p></p>
             <iframe frameborder="0" src="https://itch.io/embed/767947?border_width=3&amp;bg_color=639391&amp;fg_color=efefef&amp;link_color=008cc9&amp;border_color=004a6a" width="100%" height="171"><a href="https://kaiseidev.itch.io/yonder">Yonder by Kaisei Dev</a>
             </iframe>
+            <p>Yonder is a tranquil game about delivering packages to your neighbours and helping the community. <br><br> I was inspired by "Zelda: Wind Waker" and "Animal Crossing"; thinking that I would personally enjoy a game with the simple and relaxed gameplay loop of "Animal Crossing" and travelling by boat. I decided to use a Toon style shader, which ended up making the game look reminiscent of "Untitled Goose Game". I really enjoyed crafting the world and I plan on eventually expanding upon this idea.<br><br>This was created for the VimJam where the theme was "There and Back" and the game had to include collectibles.</p>
             <img src="img/yondergif2.gif" class="gif"></img>
         </div>
         <div class="content" data-identifier="4"><p></p>
@@ -93,10 +94,12 @@
             <button id="chordGenButton">Try Me</button>
         </div>
         <div class="content" data-identifier="6">
-            <p>This project was the subject of my dissertation. <br> It uses an autoencoder trained on real-world map data to generate satellite style images based on layouts you create.</p>
+            <p>This water simulator was created for a prototype physical art intallation, which allowed users to rotate a virtual glass of water using a glove containing a gyroscope. <br><br> Within this project I was responsible for the visualisation (this), which I created using the Box2D library in Processing. This was my first time using Processing and Java, and I learnt a lot in the making of it.</p>
+            <button id="waterSimButton">Download Demo</button>
         </div>
         <div class="content" data-identifier="7"><p></p>                <iframe frameborder="0" src="https://itch.io/embed/767947?border_width=3&amp;bg_color=639391&amp;fg_color=efefef&amp;link_color=008cc9&amp;border_color=004a6a" width="100%" height="171"><a href="https://kaiseidev.itch.io/yonder">Yonder by Kaisei Dev</a>
-                </iframe></div>
+                </iframe>
+        </div>
         <div class="content" data-identifier="8"><p></p>                <iframe frameborder="0" src="https://itch.io/embed/760482?border_width=3&amp;dark=true" width="100%" height="171"><a href="https://kaiseidev.itch.io/roots-of-all-evil">Roots of all Evil by Kaisei Dev</a>
         </iframe>
         </div>
@@ -137,6 +140,7 @@
         }
         
         document.getElementById("chordGenButton").addEventListener("click", function(){window.open("chord_gen/index.html")});
+        document.getElementById("waterSimButton").addEventListener("click", function(){window.open("https://drive.google.com/drive/folders/1CUPAkXpI_tI4rI9p5whn7SAmWep5r2Tt?usp=sharing")});
         //document.getElementById("balanceButton").onclick = LoadGame;
         //document.getElementById("mapaeButton").onclick = LoadGame2;
         function LoadGame(){

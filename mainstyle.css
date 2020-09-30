@@ -3,6 +3,7 @@ body{
     font-family:monospace;
 }
 #mainDiv{
+    display: block;
     margin: auto;
     width: 50em;
     padding: 10px;
@@ -10,25 +11,40 @@ body{
     min-height: 1300px;
 }
 #sideDivL{
-    display:inline-block;
+    display: block;
     position: absolute;
-    left: 0;
+    z-index: -1;
+    left: -60px;
     top: 0;
-    width: 500px;
+    width: 480px;
+    height: 1496px;
+    padding: 0;
     background-image:url("/img/backgroundSides.png");
+    background-repeat: no-repeat;
 }
 #sideDivR{
-    display:flex;
+    display: block;
     position: absolute;
-    right: 0;
+    z-index: -1;
+    right: -60px;
     top: 0;
-    width: 500px;
+    width: 480px;
+    height: 1496px;
+    padding: 0;
     background-image:url("/img/backgroundSides.png");
+    background-repeat: no-repeat;
+    
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 footer{
     padding: 2em;
     text-align: center;
     font-family: inherit;
+    z-index: -3;
+    height: auto;
 }
 button{
     display: block;
@@ -99,6 +115,7 @@ h1{
     max-height: 100%;
     display: inline-block;
     outline-color: white;
+    box-shadow: 2px 3px 3px 1px #050c11;
 }
 
 #itchContainer{
@@ -111,7 +128,7 @@ h1{
     margin: auto;
     padding: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+/*    transition: max-height 0.2s ease-out;*/
 }
 
 .gif{

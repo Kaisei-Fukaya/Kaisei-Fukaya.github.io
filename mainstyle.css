@@ -181,6 +181,22 @@ iframe{
     height: auto;
     margin: auto;
 }
+#pcCompareParent{
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    grid-gap: 0px;
+    overflow: none;
+}
+.pcCompareImgs{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    box-shadow: 2px 3px 3px 1px #050c11;
+}
 
 @media screen and (max-width:900px){
     #sideDivR{

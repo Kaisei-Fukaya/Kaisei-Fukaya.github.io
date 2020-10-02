@@ -1,7 +1,14 @@
 body{
     background-color: #0D1821;
     font-family:monospace;
+    cursor: url(img/winCursor.png), auto;
+    overflow-x: hidden;
+    
 }
+::selection{
+    background-color: #fc6c28;
+}
+
 audio{
     display: block;
     width: 90%;
@@ -10,6 +17,18 @@ audio{
 }
 audio:focus{
     outline: none;
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color: #BFCC94;
+}
+a:visited{
+    color: #BFCC94;
+}
+a:hover{
+    color: #fc6c28;
 }
 #mainDiv{
     display: block;
@@ -30,6 +49,7 @@ audio:focus{
     padding: 0;
     background-image:url("/img/backgroundSides.png");
     background-repeat: no-repeat;
+    opacity: 0.5;
 }
 #sideDivR{
     display: block;
@@ -42,6 +62,7 @@ audio:focus{
     padding: 0;
     background-image:url("/img/backgroundSides.png");
     background-repeat: no-repeat;
+    opacity: 0.5;
     
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -84,7 +105,7 @@ p{
     font-size: 13pt;
     margin: auto;
     margin-bottom: 20px;
-    width: 90%;
+    width: 95%;
 }
 h2{
     color: #B4CDED;
@@ -134,6 +155,10 @@ h1{
     outline-color: white;
     outline-width: thin;
     box-shadow: 2px 3px 3px 1px #050c11;
+    transition: opacity 0.4s ease-out;
+}
+.projItemImg:hover{
+    opacity: 0.7;
 }
 
 #itchContainer{
@@ -147,6 +172,8 @@ h1{
     padding: 0;
     overflow: hidden;
     text-align: justify;
+    background-color: rgba(100,100,100,0.2);
+    border-radius: 10px;
 /*    transition: max-height 0.2s ease-out;*/
 }
 
@@ -175,9 +202,15 @@ iframe{
     display: block;
     margin: auto;
 }
-#procGenIdeasImg{
+.procGenImg{
     display: block;
     width: 100%;
+    height: auto;
+    margin: auto;
+}
+.eightyPercImg{
+    display: block;
+    width: 80%;
     height: auto;
     margin: auto;
 }
@@ -196,6 +229,24 @@ iframe{
     height: auto;
     margin: auto;
     box-shadow: 2px 3px 3px 1px #050c11;
+}
+
+.sideBySideParent{
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    grid-gap: 0px;
+    overflow: none;
+}
+.pageSeperator{
+    background-color: #B4CDED;
+    height:10px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px 1px #050c11;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width:900px){

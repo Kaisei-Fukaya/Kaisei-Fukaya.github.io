@@ -65,7 +65,7 @@
             </div>
 
             <div class="projItem">
-                <img class="projItemImg collapsible" src="img/mainIMage.png" data-identifier="8"></img>
+                <img class="projItemImg collapsible" src="img/RoguelikeLevelGen1.png" data-identifier="8"></img>
             </div>
 
             <div class="projItem">
@@ -73,9 +73,11 @@
             </div>
         
         </div>
+
+        <div class="pageSeperator"></div>
         
         <div class="content" data-identifier="1">
-            <p>some textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome text</p>
+            <p>A game I made for the 2018 "js13k" competition. In this game jam contestants are challenged to create a web based game in under 13kb of space (compressed and minified). <br><br>This was my first full web game, built using the barebones <a href="https://github.com/straker/kontra" target="_blank">"Kontra.js"</a> game engine.</p>
             
         </div>
         <div class="content" data-identifier="2">
@@ -86,7 +88,7 @@
             </iframe>
             <p>Yonder is a tranquil game about delivering packages to your neighbours and helping the community. <br><br> I was inspired by "Zelda: Wind Waker" and "Animal Crossing"; thinking that I would personally enjoy a game with the simple and relaxed gameplay loop of "Animal Crossing" and travelling by boat. I decided to use a Toon style shader, which ended up making the game look reminiscent of "Untitled Goose Game". I really enjoyed crafting the world and I plan on eventually expanding upon this idea.<br><br>This was created for the VimJam where the theme was "There and Back" and the game had to include collectibles.</p>
             
-            <p>This is the second game I have scored myself, unfortunately I was unable to complete more that one tracks within the Jam's timeframe. With this I decided to go with a quartal harmony (building the chords in fourths) for a dreamy feel; and riffing on the results.</p>
+            <p>This is the second game I have scored myself, unfortunately I was unable to complete more that one track within the Jam's timeframe. With this I decided to go with a quartal harmony (building the chords in fourths) for a dreamy feel; and riffing on the results.</p>
             <audio controls>
                 <source src="audio/YonderScore1.mp3" type="audio/mpeg">
             </audio>
@@ -133,8 +135,19 @@
         </div>
 
         <div class="content" data-identifier="8">
-            <p></p>
-            <img id="procGenIdeasImg" src="img/ProcGenIdeas.png"></img>
+            <p>
+                Project Valkyrie is a roguelike with randomised levels and loot. <br><br>Developed by a team consisting of my self and 5 others. I was responsible for designing and implementing the procedural mechanics in the game.
+            </p>
+            <img class="eightyPercImg" src="img/ProcGenIdeas.png"></img>
+            <p>
+                I focused mainly on two systems: Level-generation and Item generation.
+            </p>
+            <div class="sideBySideParent">
+                <img class="procGenImg" src="img/RoguelikeLevelGen1.png"></img>
+                <img class="procGenImg" src="img/RoguelikeLevelGen2.png"></img>
+            </div>
+            <img class="eightyPercImg" src="img/ItemGenExample1.png"></img>
+
         </div>
 
         <div class="content" data-identifier="9">
@@ -144,13 +157,12 @@
                 <img class="pcCompareImgs" src="img/PCCompare2.png"></img>
             </div>
         </div>
-
         </div>
 
     <footer>
-        <a href="https://kaiseidev.itch.io/" target="_blank">Itch.io account</a>
-        <a href="https://github.com/Kaisei-Fukaya" target="_blank">Github</a>
-        <a href="https://www.youtube.com/channel/UC5Z7RCiyXPdxd5jlwhuEm-g/" target="_blank">Youtube</a>
+        <a href="https://kaiseidev.itch.io/" target="_blank">Itch.io</a> | 
+        <a href="https://github.com/Kaisei-Fukaya" target="_blank">Github</a> |
+        <a href="https://www.youtube.com/channel/UC5Z7RCiyXPdxd5jlwhuEm-g/" target="_blank">Youtube</a> | 
         <a href="https://www.linkedin.com/in/kaisei-fukaya-7250a6173/" target="_blank">LinkedIn</a>
     </footer>
 </body>
@@ -168,18 +180,29 @@
                     {
                         var content = contents[i];
                         content.style.maxHeight = /*content.scrollWidth*/100 + "%";
+                        content.style.paddingBottom = 10+"px";
                         console.log("opened " + content.dataset.identifier)
                     }
                     else
                     {
                         contents[i].style.maxHeight = null;
+                        contents[i].style.paddingBottom = 0;
+
                         collapsibles[i].style.outlineStyle = "none";
                     }
                 }
 
             });
         }
+        //disable dragging on certain images
+        var undraggables = document.getElementsByClassName("projItemImg");
+        for(var i = 0; i < undraggables.length; i++){
+            undraggables[i].setAttribute('draggable', false);
+        }
         
+        
+        
+       //Handle on click events
         document.getElementById("chordGenButton").addEventListener("click", function(){window.open("chord_gen/index.html")});
         document.getElementById("waterSimButton").addEventListener("click", function(){window.open("https://drive.google.com/drive/folders/1CUPAkXpI_tI4rI9p5whn7SAmWep5r2Tt?usp=sharing")});
         //document.getElementById("balanceButton").onclick = LoadGame;

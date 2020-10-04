@@ -30,6 +30,9 @@
         </div>
     
         <p></p>
+        
+        <button id="openToggleButton"></button>
+        <canvas id="characterSheet"></canvas>
     
         
         <h2>Projects</h2>
@@ -170,6 +173,7 @@
     <script>
         //Handle expandable menu
         var collapsibles = document.getElementsByClassName("collapsible");
+        var scrollTarget = document.querySelector(".pageSeperator");
         for (var i = 0; i < collapsibles.length; i++){
             collapsibles[i].addEventListener("click", function(){
                 this.classList.toggle("active");
@@ -182,7 +186,12 @@
                         var content = contents[i];
                         content.style.maxHeight = /*content.scrollWidth*/100 + "%";
                         content.style.paddingBottom = 10+"px";
+/*
                         console.log("opened " + content.dataset.identifier)
+*/
+                        scrollTarget.scrollIntoView({
+                            behaviour: "smooth"
+                        });
                     }
                     else
                     {
@@ -219,4 +228,5 @@
         }
         
     </script>
+    <script src="main_scripts/CharacterSheet.js"></script>
 </html>

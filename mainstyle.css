@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #0D1821;
     font-family:monospace;
@@ -5,6 +9,7 @@ body{
     overflow-x: hidden;
     
 }
+
 ::selection{
     background-color: #fc6c28;
 }
@@ -270,6 +275,23 @@ iframe{
 #waterThumb:hover{
     content: url(img/glassGyroSync2.gif);
     white-space: nowrap;
+}
+
+#openToggleButton{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    display: block;
+    background-color: black;
+    border: none;
+}
+
+#openToggleButton:focus{
+    outline: none;
+}
+
+#characterSheet{
+    transition: max-height 0.2s linear;
 }
 
 

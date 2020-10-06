@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="mainstyle.css" rel="stylesheet" />
 </head>
 <body>
@@ -31,7 +31,8 @@
     
         <p></p>
         
-        <button id="openToggleButton"></button>
+        <button id="openToggleButton"><i class="fa fa-user-circle fa-1x icon"></i></button>
+        
         <canvas id="characterSheet"></canvas>
     
         
@@ -52,7 +53,7 @@
             </div>
         
             <div class="projItem">
-                <img class="projItemImg collapsible" src="img/mainIMage.png" data-identifier="4"></img>
+                <img class="projItemImg collapsible" src="img/mainIMage.png" id="rootThumb" data-identifier="4"></img>
             </div>
 
             <div class="projItem">
@@ -82,6 +83,7 @@
         <div class="content" data-identifier="1">
             <p>A game I made for the 2018 "js13k" competition. In this game jam contestants are challenged to create a web based game in under 13kb of space (compressed and minified). <br><br>This was my first full web game, built using the barebones <a href="https://github.com/straker/kontra" target="_blank">"Kontra.js"</a> game engine.</p>
             <img src="img/Balancegif.gif" class="gif"></img>
+            <button id="balanceButton">Try Me</button>
             
         </div>
         <div class="content" data-identifier="2">
@@ -116,6 +118,8 @@
             <audio controls>
                 <source src="audio/RootsScore3Boss.mp3" type="audio/mpeg">
             </audio>
+            
+            <img src="img/rootgif1.gif" id="rootGif" class="gif"></img>
             
         </div>
 
@@ -164,6 +168,7 @@
         </div>
 
     <footer>
+        <a href="about.html">About Me</a><br><br>
         <a href="https://kaiseidev.itch.io/" target="_blank">Itch.io</a> | 
         <a href="https://github.com/Kaisei-Fukaya" target="_blank">Github</a> |
         <a href="https://www.youtube.com/channel/UC5Z7RCiyXPdxd5jlwhuEm-g/" target="_blank">Youtube</a> | 
@@ -214,6 +219,8 @@
         
        //Handle on click events
         document.getElementById("chordGenButton").addEventListener("click", function(){window.open("chord_gen/index.html")});
+        
+         document.getElementById("balanceButton").addEventListener("click", function(){window.open("balance_game/index.html")});
         document.getElementById("waterSimButton").addEventListener("click", function(){window.open("https://drive.google.com/drive/folders/1CUPAkXpI_tI4rI9p5whn7SAmWep5r2Tt?usp=sharing")});
         //document.getElementById("balanceButton").onclick = LoadGame;
         //document.getElementById("mapaeButton").onclick = LoadGame2;

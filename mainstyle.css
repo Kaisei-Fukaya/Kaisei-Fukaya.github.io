@@ -5,7 +5,7 @@ html{
 body{
     background-color: #0D1821;
     font-family:monospace;
-    cursor: url(img/winCursor.png), auto;
+/*    cursor: url(img/winCursor.png), auto;*/
     overflow-x: hidden;
     
 }
@@ -25,6 +25,7 @@ audio:focus{
 }
 a{
     text-decoration: none;
+    transition: color 150ms;
 }
 a:link{
     color: #BFCC94;
@@ -140,6 +141,7 @@ h1{
     overflow: none;
     background-color: #0D1821;
     padding: 5px;
+    height: 100%;
     margin: 0;
     overflow: none;
 }
@@ -147,10 +149,10 @@ h1{
     display: grid;
     width: 100%;
     margin: auto;
-/*    grid-template-columns: repeat(3, 33%);*/
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, minmax(100px, 170px));
     grid-gap: 0px;
+    grid-row-gap: 10px;
     overflow: none;
     margin-bottom: 10px;
 }
@@ -211,6 +213,13 @@ h1{
     border: none;
     box-shadow: 2px 3px 3px 1px #050c11;
 }
+
+#rootGif{
+    width: 70%;
+    height: auto;
+    border: none;
+    box-shadow: 2px 3px 3px 1px #050c11;
+}
 iframe{
     display: block;
     margin: auto;
@@ -266,6 +275,15 @@ iframe{
     max-width: 100%;
 }
 
+.icon{
+    display: block;
+    color: aliceblue;
+    background-color: none;
+    width: 100px;
+    margin: auto;
+    font-size: 50px;
+}
+
 #yonderThumb:hover{
     content: url(img/yondergif2.gif);
 }
@@ -276,6 +294,11 @@ iframe{
     content: url(img/glassGyroSync2.gif);
     white-space: nowrap;
 }
+#rootThumb:hover{
+    content: url(img/rootgif1.gif);
+    white-space: nowrap;
+}
+
 
 #openToggleButton{
     width: 60px;
@@ -292,6 +315,10 @@ iframe{
 
 #characterSheet{
     transition: max-height 0.2s linear;
+}
+
+#balanceButton{
+    
 }
 
 

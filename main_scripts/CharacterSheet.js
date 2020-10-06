@@ -1,48 +1,40 @@
-class CharacterSheet{
-    
-    #canvas;
-    #ctx;
-    #openToggleButton;
+ 
+var canvas = document.getElementById("characterSheet");
+var ctx = canvas.getContext("2d");
+var openToggleButton = document.getElementById("openToggleButton");
 
 
-    #isOpen = true;
-    
-    constructor(canvasElement, toggleButton){
-        this.#canvas = canvasElement;
-        this.#ctx = this.#canvas.getContext("2d");
-        this.#openToggleButton = toggleButton;
+var isOpen = true;
+
+function initialise(){
+    canvas.style.width = "100%";
+    canvas.style.height = "300px";
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    canvas.style.outline = "1px solid black";
+    openToggleButton.addEventListener("click", openToggle);
+    console.log("hgasjhgjksg");
+}
+
+function openToggle(){
+    isOpen = !isOpen;
+    if(isOpen){
+        //open
+        canvas.style.maxHeight = canvas.style.height;
+        canvas.style.display = "visible";
+        canvas.style.outline = "1px solid black";
+/*        console.log("open");*/
     }
-
-    initialise(){
-        this.#canvas.style.width = "100%";
-        this.#canvas.style.height = "300px";
-        this.#canvas.width = this.#canvas.offsetWidth;
-        this.#canvas.height = this.#canvas.offsetHeight;
-        this.#canvas.style.outline = "1px solid black";
-        this.#openToggleButton.addEventListener("click", this.openToggle);
-        console.log("hgasjhgjksg");
-    }
-
-    openToggle(){
-        this.#isOpen = !this.#isOpen;
-        if(this.#isOpen){
-            //open
-            this.#canvas.style.maxHeight = this.#canvas.style.height;
-            this.#canvas.style.display = "visible";
-            this.#canvas.style.outline = "1px solid black";
-    /*        console.log("open");*/
-        }
-        else{
-            //close
-            this.#canvas.style.maxHeight = 0;
-            this.#canvas.style.display = "hidden";
-            this.#canvas.style.outline = "none";
-    /*        console.log("close");*/
-        }
+    else{
+        //close
+        canvas.style.maxHeight = 0;
+        canvas.style.display = "hidden";
+        canvas.style.outline = "none";
+/*        console.log("close");*/
     }
 }
 
-var csMain = new CharacterSheet(document.getElementById("characterSheet"), document.getElementById("openToggleButton"));
-csMain.initialise();
-csMain.openToggle();
+
+initialise();
+openToggle();
 

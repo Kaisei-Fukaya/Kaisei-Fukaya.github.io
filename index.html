@@ -9,31 +9,12 @@
 	<link href="mainstyle.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="sideDivL">sdsdsd</div>
-    <div id="sideDivR">sdsdsd</div>
+    <div id="sideDivL"></div>
+    <div id="sideDivR"></div>
     <div id="mainDiv">
         <h1>Kaisei Fukaya <br> <span class="subheading">Game Developer|Programmer</span></h1>
         
-        <p>Welcome to my GitHub web page. This will act as a hub for all of my web based projects.</p>
-        
-        <p>Check out some of my projects on <a href="https://kaiseidev.itch.io/" target="_blank">Itch.io</a> where I occasionally take part in Game Jams and release my games.</p>
-
-        <div id="itchContainer">
-            <div class="projItem">
-
-            </div>
-            <div class="projItem">
-
-            </div>
-            <div class="projItem"></div>
-            <div class="projItem"></div>
-        </div>
-    
-        <p></p>
-        
-        <button id="openToggleButton"><i class="fa fa-user-circle fa-1x icon"></i></button>
-        
-        <canvas id="characterSheet"></canvas>
+        <p>Greetings! <br><br> I'm glad you stopped by. Below you will find a handful of the projects I have had the pleasure of working on.<br><br>Want to contact me? Visit the <a href="about.html">"About Me"</a> page!</p>
     
         
         <h2>Projects</h2>
@@ -75,19 +56,25 @@
             <div class="projItem">
                 <img class="projItemImg collapsible" src="img/PCCompare1Thumb.png" data-identifier="9"></img>
             </div>
+
+            <div class="projItem">
+                <img class="projItemImg collapsible" src="img/nanoBotsMainLogo.png" data-identifier="10"></img>
+            </div>
         
         </div>
 
         <div class="pageSeperator"></div>
         
         <div class="content" data-identifier="1">
-            <p>A game I made for the 2018 "js13k" competition. In this game jam contestants are challenged to create a web based game in under 13kb of space (compressed and minified). <br><br>This was my first full web game, built using the barebones <a href="https://github.com/straker/kontra" target="_blank">"Kontra.js"</a> game engine.</p>
+            <p>A game I made for the 2018 "js13k" competition. In this game jam contestants are challenged to create a web based game in under 13kb of space (compressed and minified). <br><br>This was my first full web game, built using the barebones <a href="https://github.com/straker/kontra" target="_blank">"Kontra.js"</a> game engine.<br><br>The 13kb limitation was really challenging, it reminded me about how important optimisation is for both performance and file size. It was also very satisfying to get the game running on mobile and desktop browsers.</p>
             <img src="img/Balancegif.gif" class="gif"></img>
             <button id="balanceButton">Try Me</button>
             
         </div>
         <div class="content" data-identifier="2">
-            <p>This project was the subject of my dissertation. <br> It uses an autoencoder trained on real-world map data to generate satellite style images based on layouts you create.</p>
+            <p>A project exploring the use of machine learning as an aid in creating images.<br> This project was the subject of my dissertation. <br> It uses an autoencoder trained on real-world map data to generate satellite style images based on layouts you create. </br>Read more <a href="files/000979004_Fukaya_Final_Year_Project_Dissertation.pdf" target="_blank">here</a></p>
+            
+            <button id="mapAEButton">Download</button>
         </div>
         <div class="content" data-identifier="3"><p></p>
             <iframe frameborder="0" src="https://itch.io/embed/767947?border_width=3&amp;bg_color=639391&amp;fg_color=efefef&amp;link_color=008cc9&amp;border_color=004a6a" width="100%" height="171"><a href="https://kaiseidev.itch.io/yonder">Yonder by Kaisei Dev</a>
@@ -159,10 +146,30 @@
         </div>
 
         <div class="content" data-identifier="9">
-            <p></p>
+            <p>The PC parts comparer is a prototype tool that allows users to build a PC by selecting parts and comparing them. The system provides a 3D visualisation for each part as well as an overview of the final system, showing how much each part costs. <br><br>As the lead programmer on this project I was responsible for the underlying systems such as shortlisting and item comparison, I also designed the main UI. <br><br> This project taught me a lot about working in a team with different roles and articulating my ideas to those with different skillsets.</p>
+            <p class="audioCaption">Final Prototype</p>
             <div id="pcCompareParent">
-                <img class="pcCompareImgs" src="img/PCCompare1.png"></img>
-                <img class="pcCompareImgs" src="img/PCCompare2.png"></img>
+                <img class="subImg" src="img/PCCompare1.png"></img>
+                <img class="subImg" src="img/PCCompare2.png"></img>
+            </div>
+            <p class="audioCaption">Initial Previsualisations</p>
+            <div id="pcCompareParent">
+                <img class="subImg" src="img/compare%20v2.jpg"></img>
+                <img class="subImg" src="img/build%20v2.jpg"></img>
+            </div>
+        </div>
+
+        <div class="content" data-identifier="10">
+            <p>Nano-Bots is an AR game where you control different kinds of tiny robots with different abilities.</p>
+            <p class="audioCaption">Final Prototype</p>
+            <div id="pcCompareParent">
+                <img class="subImg" src="img/nanoBotsS3.png"></img>
+                <img class="subImg" src="img/nanoBotsS2.png"></img>
+            </div>
+            <p class="audioCaption">Level Designs</p>
+            <div id="pcCompareParent">
+                <img class="subImg" src="img/Level1Design.png"></img>
+                <img class="subImg" src="img/Level2Design.png"></img>
             </div>
         </div>
         </div>
@@ -174,6 +181,8 @@
         <a href="https://www.youtube.com/channel/UC5Z7RCiyXPdxd5jlwhuEm-g/" target="_blank">Youtube</a> | 
         <a href="https://www.linkedin.com/in/kaisei-fukaya-7250a6173/" target="_blank">LinkedIn</a>
     </footer>
+
+    <div id="img-popup"><img id="img-popup-img" class="projItemImg" src="img/backgroundSides.png"></img></div>
 </body>
     <script>
         //Handle expandable menu
@@ -216,10 +225,26 @@
         }
         
         
+        //Expand images on focus
+        var popup = document.getElementById("img-popup");
+        popup.addEventListener("click", function(){
+            this.style.maxHeight = 0;
+        });
+        var popupImg = document.getElementById("img-popup-img");
+        var images = document.getElementsByClassName("subImg");
+        for (var i = 0; i < images.length; i++){
+            images[i].addEventListener("click", function(){
+                popupImg.src = this.src;
+                popup.style.maxHeight = 100+"%";
+                console.log("clicked image");
+            });
+        }
+        
         
        //Handle on click events
         document.getElementById("chordGenButton").addEventListener("click", function(){window.open("chord_gen/index.html")});
         
+         document.getElementById("mapAEButton").addEventListener("click", function(){window.open("https://drive.google.com/file/d/18ePZYU0swlOnyggTTjjCIeSra7EQtf4_/view?usp=sharing")});
          document.getElementById("balanceButton").addEventListener("click", function(){window.open("balance_game/index.html")});
         document.getElementById("waterSimButton").addEventListener("click", function(){window.open("https://drive.google.com/drive/folders/1CUPAkXpI_tI4rI9p5whn7SAmWep5r2Tt?usp=sharing")});
         //document.getElementById("balanceButton").onclick = LoadGame;
@@ -235,5 +260,4 @@
         }
         
     </script>
-    <script src="main_scripts/CharacterSheet.js"></script>
 </html>

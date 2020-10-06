@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-    <title>Home Page</title>
+    <title>About Me</title>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -9,8 +9,8 @@
 	<link href="mainstyle.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="sideDivL">sdsdsd</div>
-    <div id="sideDivR">sdsdsd</div>
+    <div id="sideDivL"></div>
+    <div id="sideDivR"></div>
     <div id="mainDiv">
         <h1>Kaisei Fukaya <br> <span class="subheading">Game Developer|Programmer</span></h1>
         
@@ -34,6 +34,20 @@
         <button id="openToggleButton"><i class="fa fa-user-circle fa-1x icon"></i></button>
         
         <canvas id="characterSheet"></canvas>
+        
+        <div id="contact">
+            <div id="contact-form">
+                <form action="https://formspree.io/f/xbjpdokj" method="POST">
+                    <span class="subheading" id="contact-title">Contact Me</span>
+                    <input type="hidden" name="_subject" value="Message from portfolio website"/>
+                    <input type="email" name="_replyto" placeholder="Your Email Address" required>
+                    <textarea name="message" placeholder="Type your message" required></textarea>
+
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+            <p style="text-align: center">Or contact me on the following:<br>Email: kaiseidev@gmail.com</p>
+        </div>
     </div>
     
     <footer>

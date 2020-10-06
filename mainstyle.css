@@ -7,7 +7,7 @@ body{
     font-family:monospace;
 /*    cursor: url(img/winCursor.png), auto;*/
     overflow-x: hidden;
-    
+    position: relative;
 }
 
 ::selection{
@@ -238,19 +238,20 @@ iframe{
 }
 #pcCompareParent{
     display: grid;
-    width: 100%;
+    width: 98%;
     margin: auto;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    grid-gap: 0px;
+    grid-gap: 5px;
     overflow: none;
 }
-.pcCompareImgs{
+.subImg{
     display: block;
     width: 100%;
     height: auto;
     margin: auto;
     box-shadow: 2px 3px 3px 1px #050c11;
+    cursor: zoom-in;
 }
 
 .sideBySideParent{
@@ -317,8 +318,105 @@ iframe{
     transition: max-height 0.2s linear;
 }
 
+#img-popup{
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+
+#img-popup-img{
+    display: block;
+    top: 50%;
+    max-height: inherit;
+    position: relative;
+    width: 70%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: auto;
+    margin: auto;
+    box-shadow: none;
+    padding: 20px;
+    object-fit: contain;
+    transition: max-height 0.05s ease-in;
+}
+#img-popup-img:hover{
+    opacity: 1;
+    box-shadow: none;
+    cursor: zoom-out;
+}
+
 #balanceButton{
     
+}
+
+#contact-form{
+    
+}
+#contact-title{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25pt;
+}
+form{
+    display: grid;
+    grid-gap: 10px;
+    box-shadow: 2px 3px 3px 1px #050c11;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+}
+textarea{
+    resize: none;
+    width: 95%;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #344966;
+    height: 10em;
+    font: inherit;
+    box-shadow: 1px 1px 3px 1px #050c11;
+    color: inherit;
+    padding: 5px;
+    font-size: 13pt;
+}
+input{
+    margin: auto;
+    width: 95%;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 3px 1px #050c11;
+    background-color: #344966;
+    height: 2em;
+    color: white;
+    padding: 5px;
+    font-size: 16pt;
+}
+::placeholder{
+    color: white;
+}
+input:focus, textarea:focus{
+    outline: none;
+    background-color: #0D1821;
+}
+input:hover, textarea:hover{
+    background-color: #0D1821;
+}
+input, textarea{
+    transition: background-color 0.1s linear;
+}
+input[type="submit"]{
+    height: 2em;
+    width: 95%;
+    background-color: #B4CDED;
+    color: #0D1821;
 }
 
 

@@ -51,11 +51,11 @@ a:hover{
     left: -60px;
     top: 0;
     width: 480px;
-    height: 1496px;
+    height: 100%;
     padding: 0;
     background-image:url("/img/backgroundSides.png");
-    background-repeat: no-repeat;
-    opacity: 0.5;
+    background-repeat: repeat-y;
+    opacity: 0.2;
 }
 #sideDivR{
     display: block;
@@ -64,11 +64,11 @@ a:hover{
     right: -60px;
     top: 0;
     width: 480px;
-    height: 1496px;
+    height: 100%;
     padding: 0;
     background-image:url("/img/backgroundSides.png");
-    background-repeat: no-repeat;
-    opacity: 0.5;
+    background-repeat: repeat-y;
+    opacity: 0.2;
     
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -287,11 +287,12 @@ iframe{
 }
 .pageSeperator{
     background-color: #B4CDED;
-    height:10px;
+    height:2px;
     width: 100%;
     border-radius: 10px;
     box-shadow: 2px 3px 3px 1px #050c11;
     margin-bottom: 10px;
+    margin-top: 15px;
 }
 .collapsible{
     max-height: 100%;

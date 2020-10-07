@@ -4,6 +4,9 @@ html{
 
 body{
     background-color: #0D1821;
+/*    background-image: url(img/IMG_6026.JPG);
+    background-position: -600px 0;
+    background-size: 2000px 1500px;*/
     font-family:monospace;
 /*    cursor: url(img/winCursor.png), auto;*/
     overflow-x: hidden;
@@ -113,6 +116,16 @@ p{
     margin-bottom: 20px;
     width: 95%;
 }
+li{
+    color: white;
+    padding: 5px;
+    line-height: 1.5em;
+    font-family:monospace;
+    font-size: 13pt;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 95%;
+}
 h2{
     color: #B4CDED;
     padding: 10px;
@@ -194,8 +207,12 @@ h1{
     transition: opacity 0.1s linear;
 }
 
-.projItemImg:hover~ .platformOverlay{
+.contextImage:hover~ .platformOverlay{
     opacity: 1;
+}
+
+.pOverlayParent{
+    position: relative;
 }
 
 #itchContainer{
@@ -260,6 +277,7 @@ iframe{
 }
 #pcCompareParent{
     display: grid;
+    position: relative;
     width: 98%;
     margin: auto;
     grid-template-columns: repeat(2, 1fr);
@@ -273,6 +291,8 @@ iframe{
     height: auto;
     margin: auto;
     box-shadow: 2px 3px 3px 1px #050c11;
+}
+.expandable{
     cursor: zoom-in;
 }
 
@@ -308,6 +328,15 @@ iframe{
     font-size: 50px;
 }
 
+.emphasis{
+    font-weight: 600;
+    text-align: center;
+    font-size: 17pt;
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px 1px #050c11;
+    background-color: #fc6c28;
+}
+
 #yonderThumb:hover{
     content: url(img/yondergif2.gif);
 }
@@ -322,7 +351,10 @@ iframe{
     content: url(img/rootgif1.gif);
     white-space: nowrap;
 }
-
+#fpsThumb:hover{
+    content: url(img/shootergif3.gif);
+    white-space: nowrap;
+}
 
 #openToggleButton{
     width: 60px;
@@ -441,7 +473,17 @@ input[type="submit"]{
     background-color: #B4CDED;
     color: #0D1821;
 }
+input[type="submit"]:hover{
+    background-color: white;
+}
 
+.text-dark{
+    color: #050c11; 
+}
+
+.spacer{
+    padding: 3px 0;
+}
 
 @media screen and (max-width:900px){
     #sideDivR{

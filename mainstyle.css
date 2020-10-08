@@ -7,7 +7,7 @@ body{
 /*    background-image: url(img/IMG_6026.JPG);
     background-position: -600px 0;
     background-size: 2000px 1500px;*/
-    font-family:monospace;
+    font-family: "Roboto", monospace;
 /*    cursor: url(img/winCursor.png), auto;*/
     overflow-x: hidden;
     position: relative;
@@ -42,7 +42,7 @@ a:hover{
 #mainDiv{
     display: block;
     margin: auto;
-    width: 50em;
+    width: 680px;
     padding: 10px;
     overflow: auto;
     min-height: 1300px;
@@ -110,7 +110,7 @@ p{
     color: white;
     padding: 5px;
     line-height: 1.5em;
-    font-family:monospace;
+    font-family:inherit;
     font-size: 13pt;
     margin: auto;
     margin-bottom: 20px;

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="mainstyle.css" rel="stylesheet" />
 </head>
@@ -22,76 +23,65 @@
         <div class="gridParent">
             
             <div class="projItem">
-                <img class="projItemImg collapsible undraggable contextImage" id="balanceThumb" src="img/cover.PNG" data-identifier="1"></img>
-                <div class="platformOverlay">JavaScript</div>
+                <img class="projItemImg collapsible undraggable contextImage" id="yonderThumb" src="img/coveryonder.png" data-identifier="1"></img>
+                <div class="platformOverlay">Unity Game</div>
             </div>
         
             <div class="projItem">
-                <img class="projItemImg collapsible undraggable contextImage" src="img/mapae.PNG" data-identifier="2"></img>
+                <img class="projItemImg collapsible undraggable contextImage" src="img/mainIMage.png" id="rootThumb" data-identifier="2"></img>
+                <div class="platformOverlay">Unity Game</div>
+            </div>
+    
+            <div class="projItem">
+                <img class="projItemImg collapsible undraggable contextImage" id="fpsThumb" src="img/shootergifimg.png" data-identifier="3"></img>
+                <div class="platformOverlay">Unity Game<br><span class="subheading">Work in Progress</span></div>
+            </div>
+    
+            <div class="projItem">
+                <img class="projItemImg collapsible undraggable contextImage" src="img/MLSTATES_image_0390.png" data-identifier="4"></img>
+                <div class="platformOverlay">Reinforcement Learning</div>
+            </div>
+        
+            <div class="projItem">
+                <img class="projItemImg collapsible undraggable contextImage" src="img/mapae.PNG" data-identifier="5"></img>
                 <div class="platformOverlay">Machine-Learning</div>
-            </div>
-        
-            <div class="projItem">
-                <img class="projItemImg collapsible undraggable contextImage" id="yonderThumb" src="img/coveryonder.png" data-identifier="3"></img>
-                <div class="platformOverlay">Unity Game</div>
-            </div>
-        
-            <div class="projItem">
-                <img class="projItemImg collapsible undraggable contextImage" src="img/mainIMage.png" id="rootThumb" data-identifier="4"></img>
-                <div class="platformOverlay">Unity Game</div>
             </div>
 
             <div class="projItem">
-                <img class="projItemImg collapsible undraggable contextImage" src="img/chordsImg.PNG" data-identifier="5"></img>
+                <img class="projItemImg collapsible undraggable contextImage" src="img/chordsImg.PNG" data-identifier="6"></img>
                 <div class="platformOverlay">Web App</div>
             </div>
 
             <div class="projItem">
-                <img class="projItemImg collapsible undraggable contextImage" id="waterThumb" src="img/waterIcon.png" data-identifier="6"></img>
-                <div class="platformOverlay">Processing</div>
-            </div>
-
-            <div class="projItem">
-                <img class="projItemImg collapsible undraggable contextImage" src="img/MLSTATES_image_0390.png" data-identifier="7"></img>
-                <div class="platformOverlay">Reinforcement Learning</div>
-            </div>
-
-            <div class="projItem">
-                <img class="projItemImg collapsible undraggable contextImage" src="img/RoguelikeLevelGen1.png" data-identifier="8"></img>
+                <img class="projItemImg collapsible undraggable contextImage" src="img/RoguelikeLevelGen1.png" data-identifier="7"></img>
                 <div class="platformOverlay">Proc-Gen</div>
             </div>
 
             <div class="projItem">
-                <img class="projItemImg collapsible undraggable contextImage" src="img/PCCompare1Thumb.png" data-identifier="9"></img>
-                <div class="platformOverlay">Unity App</div>
-            </div>
-
-            <div class="projItem">
-                <img class="projItemImg collapsible undraggable contextImage" src="img/nanoBotsMainLogo.png" data-identifier="10"></img>
+                <img class="projItemImg collapsible undraggable contextImage" src="img/nanoBotsMainLogo.png" data-identifier="8"></img>
                 <div class="platformOverlay">Unity Game</div>
             </div>
 
             <div class="projItem">
-                <img class="projItemImg collapsible undraggable contextImage" id="fpsThumb" src="img/shootergifimg.png" data-identifier="11"></img>
-                <div class="platformOverlay">Unity Game<br><span class="subheading">Work in Progress</span></div>
+                <img class="projItemImg collapsible undraggable contextImage" id="waterThumb" src="img/waterIcon.png" data-identifier="9"></img>
+                <div class="platformOverlay">Processing</div>
+            </div>
+
+            <div class="projItem">
+                <img class="projItemImg collapsible undraggable contextImage" src="img/PCCompare1Thumb.png" data-identifier="10"></img>
+                <div class="platformOverlay">Unity App</div>
+            </div>
+
+            <div class="projItem">
+                <img class="projItemImg collapsible undraggable contextImage" id="balanceThumb" src="img/cover.PNG" data-identifier="11"></img>
+                <div class="platformOverlay">JavaScript</div>
             </div>
         
         </div>
 
         <div class="pageSeperator"></div>
-        
-        <div class="content" data-identifier="1">
-            <p>A game I made for the 2018 "js13k" competition. In this game jam contestants are challenged to create a web based game in under 13kb of space (compressed and minified). <br><br>This was my first full web game, built using the barebones <a href="https://github.com/straker/kontra" target="_blank">"Kontra.js"</a> game engine.<br><br>The 13kb limitation was really challenging, it reminded me about how important optimisation is for both performance and file size. It was also very satisfying to get the game running on mobile and desktop browsers.</p>
-            <img src="img/Balancegif.gif" class="gif"></img>
-            <button id="balanceButton">Try Me</button>
-            
-        </div>
-        <div class="content" data-identifier="2">
-            <p>A project exploring the use of machine learning as an aid in creating images.<br> This project was the subject of my dissertation. <br> It uses an autoencoder trained on real-world map data to generate satellite style images based on layouts you create. </br>Read more <a href="files/000979004_Fukaya_Final_Year_Project_Dissertation.pdf" target="_blank">here</a></p>
-            
-            <button id="mapAEButton">Download</button>
-        </div>
-        <div class="content" data-identifier="3"><p></p>
+
+        <div class="content" data-identifier="1"><p></p>
             <iframe frameborder="0" src="https://itch.io/embed/767947?border_width=3&amp;bg_color=639391&amp;fg_color=efefef&amp;link_color=008cc9&amp;border_color=004a6a" width="100%" height="171"><a href="https://kaiseidev.itch.io/yonder">Yonder by Kaisei Dev</a>
             </iframe>
             <p>Yonder is a tranquil game about delivering packages to your neighbours and helping the community. <br><br> I was inspired by certain elements of "Zelda: Wind Waker" and "Animal Crossing"; thinking that I would personally enjoy a game with the simple and relaxed gameplay loop of "Animal Crossing" and travelling by boat. I really enjoyed crafting the world and I plan on eventually expanding upon this idea.<br><br>This was created for the <a href="https://itch.io/jam/vimjam">"8 Bits to Infinity VimJam"</a> where the theme was "There and Back" and the game had to include collectibles.</p>
@@ -102,7 +92,8 @@
             </audio>
             <img src="img/yondergif2.gif" class="gif"></img>
         </div>
-        <div class="content" data-identifier="4">
+
+        <div class="content" data-identifier="2">
             <p></p>
             <iframe frameborder="0" src="https://itch.io/embed/760482?border_width=3&amp;dark=true" width="100%" height="171"><a href="https://kaiseidev.itch.io/roots-of-all-evil">Roots of all Evil by Kaisei Dev</a>
             </iframe>
@@ -126,71 +117,7 @@
             
         </div>
 
-        <div class="content" data-identifier="5">
-            <p>Want to make some music but lacking inspiration? Use this web app to generate chord progressions in any key or mode you choose. <br><br>I decided to make this generator as a way to practice and break out of certain playing habits. It was also a great excuse to learn how to put together a web app using a Web App Manifest, and sharpen up my JavaScript and CSS.</p>
-            
-            <button id="chordGenButton">Try Me</button>
-        </div>
-
-        <div class="content" data-identifier="6">
-            <p></p>
-            <img src="img/glassGyroSync.gif" id="waterGif" class="gif"></img>
-            <p>This water simulator was created for a prototype physical art intallation, which allowed users to rotate a virtual glass of water using a glove containing a gyroscope. <br><br> Within this project I was responsible for the visualisation (this), which I created using the Box2D library in Processing. This was my first time using Processing and Java, and I learnt a lot in the making of it.</p>
-            <button id="waterSimButton">Download Demo</button>
-        </div>
-
-        <div class="content" data-identifier="7">
-            <p></p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/lqwYQ9UmAdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <a href="files/MLStates%20Agents%20Evaluation.pdf" target="_blank">Read More</a>
-            
-        </div>
-
-        <div class="content" data-identifier="8">
-            <p>
-                Project Valkyrie is a roguelike with randomised levels and loot. <br><br>Developed by a team consisting of my self and 5 others. I was responsible for designing and implementing the procedural mechanics in the game.
-            </p>
-            <img class="eightyPercImg expandable" src="img/ProcGenIdeas.png"></img>
-            <p>
-                I focused mainly on two systems: Level-generation and Item generation.
-            </p>
-            <div class="sideBySideParent">
-                <img class="procGenImg expandable" src="img/RoguelikeLevelGen1.png"></img>
-                <img class="procGenImg expandable" src="img/RoguelikeLevelGen2.png"></img>
-            </div>
-            <img class="eightyPercImg expandable" src="img/ItemGenExample1.png"></img>
-
-        </div>
-
-        <div class="content" data-identifier="9">
-            <p>The PC parts comparer is a prototype tool that allows users to build a PC by selecting parts and comparing them. The system provides a 3D visualisation for each part as well as an overview of the final system, showing how much each part costs. <br><br>As the lead programmer on this project I was responsible for the underlying systems such as shortlisting and item comparison, I also designed the main UI. <br><br> This project taught me a lot about working in a team with different roles and articulating my ideas to those with different skillsets.</p>
-            <p class="audioCaption">Final Prototype</p>
-            <div id="pcCompareParent">
-                <img class="subImg expandable" src="img/PCCompare1.png"></img>
-                <img class="subImg expandable" src="img/PCCompare2.png"></img>
-            </div>
-            <p class="audioCaption">Initial Previsualisations</p>
-            <div id="pcCompareParent">
-                <img class="subImg expandable" src="img/compare%20v2.jpg"></img>
-                <img class="subImg expandable" src="img/build%20v2.jpg"></img>
-            </div>
-        </div>
-
-        <div class="content" data-identifier="10">
-            <p>Nano-Bots is an AR game where you control different kinds of tiny robots with different abilities.</p>
-            <p class="audioCaption">Final Prototype</p>
-            <div id="pcCompareParent">
-                <img class="subImg expandable" src="img/nanoBotsS3.png"></img>
-                <img class="subImg expandable" src="img/nanoBotsS2.png"></img>
-            </div>
-            <p class="audioCaption">Level Designs</p>
-            <div id="pcCompareParent">
-                <img class="subImg expandable" src="img/Level1Design.png"></img>
-                <img class="subImg expandable" src="img/Level2Design.png"></img>
-            </div>
-        </div>
-
-        <div class="content" data-identifier="11">
+        <div class="content" data-identifier="3">
             <p>A fast paced first person shooter with randomised elements and permadeath. Currently in early stages of development.<br><br>I began working on this after graduation as a passion project with the idea of combining my love for randomisation and fast paced first person shooters. <br><br>One mechanic that I very much enjoyed working on was the limb system for enemies- being able to damage each limb individually and having them react with physics. <br><br>The biggest thing I have learnt from this project so far, is that with a large complicated project its important to design from the top down, beginning with broad strokes then honing in on the details. I learnt this the hard way by becoming laser focussed on the weapon system- reaching a point where I thought it was finished- later having to refactor it multiple times to work with the new features I was adding.</p>
             <p class="audioCaption">Features & Mechanics</p>
             <div id="pcCompareParent">
@@ -215,6 +142,84 @@
                     <div class="platformOverlay text-dark">Physics</div>
                 </div>
             </div>
+        </div>
+
+        <div class="content" data-identifier="4">
+            <p></p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lqwYQ9UmAdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="files/MLStates%20Agents%20Evaluation.pdf" target="_blank">Read More</a>
+            
+        </div>
+
+        <div class="content" data-identifier="5">
+            <p>A project exploring the use of machine learning as an aid in creating images.<br> This project was the subject of my dissertation. <br> It uses an autoencoder trained on real-world map data to generate satellite style images based on layouts you create. </br>Read more <a href="files/000979004_Fukaya_Final_Year_Project_Dissertation.pdf" target="_blank">here</a></p>
+            
+            <button id="mapAEButton">Download</button>
+        </div>
+
+        <div class="content" data-identifier="6">
+            <p>Want to make some music but lacking inspiration? Use this web app to generate chord progressions in any key or mode you choose. <br><br>I decided to make this generator as a way to practice and break out of certain playing habits. It was also a great excuse to learn how to put together a web app using a Web App Manifest, and sharpen up my JavaScript and CSS.</p>
+            
+            <button id="chordGenButton">Try Me</button>
+        </div>
+
+        <div class="content" data-identifier="7">
+            <p>
+                Project Valkyrie is a roguelike with randomised levels and loot. <br><br>Developed by a team consisting of my self and 5 others. I was responsible for designing and implementing the procedural mechanics in the game.
+            </p>
+            <img class="eightyPercImg expandable" src="img/ProcGenIdeas.png"></img>
+            <p>
+                I focused mainly on two systems: Level-generation and Item generation.
+            </p>
+            <div class="sideBySideParent">
+                <img class="procGenImg expandable" src="img/RoguelikeLevelGen1.png"></img>
+                <img class="procGenImg expandable" src="img/RoguelikeLevelGen2.png"></img>
+            </div>
+            <img class="eightyPercImg expandable" src="img/ItemGenExample1.png"></img>
+
+        </div>
+
+        <div class="content" data-identifier="8">
+            <p>Nano-Bots is an AR game where you control different kinds of tiny robots with different abilities. <br><br></p>
+            <p class="audioCaption">Final Prototype</p>
+            <div id="pcCompareParent">
+                <img class="subImg expandable" src="img/nanoBotsS3.png"></img>
+                <img class="subImg expandable" src="img/nanoBotsS2.png"></img>
+            </div>
+            <p class="audioCaption">Level Designs</p>
+            <div id="pcCompareParent">
+                <img class="subImg expandable" src="img/Level1Design.png"></img>
+                <img class="subImg expandable" src="img/Level2Design.png"></img>
+            </div>
+            <p>Check out the <a href="files/NanoBotsGDD.pdf" target="_blank">GDD</a></p>
+        </div>
+
+        <div class="content" data-identifier="9">
+            <p></p>
+            <img src="img/glassGyroSync.gif" id="waterGif" class="gif"></img>
+            <p>This water simulator was created for a prototype physical art intallation, which allowed users to rotate a virtual glass of water using a glove containing a gyroscope. <br><br> Within this project I was responsible for the visualisation (this), which I created using the Box2D library in Processing. This was my first time using Processing and Java, and I learnt a lot in the making of it.</p>
+            <button id="waterSimButton">Download Demo</button>
+        </div>
+
+        <div class="content" data-identifier="10">
+            <p>The PC parts comparer is a prototype tool that allows users to build a PC by selecting parts and comparing them. The system provides a 3D visualisation for each part as well as an overview of the final system, showing how much each part costs. <br><br>As the lead programmer on this project I was responsible for the underlying systems such as shortlisting and item comparison, I also designed the main UI. <br><br> This project taught me a lot about working in a team with different roles and articulating my ideas to those with different skillsets.</p>
+            <p class="audioCaption">Final Prototype</p>
+            <div id="pcCompareParent">
+                <img class="subImg expandable" src="img/PCCompare1.png"></img>
+                <img class="subImg expandable" src="img/PCCompare2.png"></img>
+            </div>
+            <p class="audioCaption">Initial Previsualisations</p>
+            <div id="pcCompareParent">
+                <img class="subImg expandable" src="img/compare%20v2.jpg"></img>
+                <img class="subImg expandable" src="img/build%20v2.jpg"></img>
+            </div>
+        </div>
+
+        <div class="content" data-identifier="11">
+            <p>A game I made for the 2018 "js13k" competition. In this game jam contestants are challenged to create a web based game in under 13kb of space (compressed and minified). <br><br>This was my first full web game, built using the barebones <a href="https://github.com/straker/kontra" target="_blank">"Kontra.js"</a> game engine.<br><br>The 13kb limitation was really challenging, it reminded me how important optimisation is for both performance and file size. It was also very satisfying to get the game running on mobile and desktop browsers.</p>
+            <img src="img/Balancegif.gif" class="gif"></img>
+            <button id="balanceButton">Try Me</button>
+            
         </div>
 
         </div>
@@ -248,6 +253,7 @@
 /*
                         console.log("opened " + content.dataset.identifier)
 */
+                        //collapsibles[i].style.outlineStyle = "solid";
                         scrollTarget.scrollIntoView({
                             behaviour: "smooth"
                         });

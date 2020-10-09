@@ -82,7 +82,7 @@
         <div class="pageSeperator"></div>
 
         <div class="content" data-identifier="1"><p></p>
-            <iframe frameborder="0" src="https://itch.io/embed/767947?border_width=3&amp;bg_color=639391&amp;fg_color=efefef&amp;link_color=008cc9&amp;border_color=004a6a" width="100%" height="171"><a href="https://kaiseidev.itch.io/yonder">Yonder by Kaisei Dev</a>
+            <iframe frameborder="0" src="https://itch.io/embed/767947?border_width=3&amp;bg_color=639391&amp;fg_color=efefef&amp;link_color=008cc9&amp;border_color=004a6a" width="96%" height="171"><a href="https://kaiseidev.itch.io/yonder">Yonder by Kaisei Dev</a>
             </iframe>
             <p>Yonder is a tranquil game about delivering packages to your neighbours and helping the community. <br><br> I was inspired by certain elements of "Zelda: Wind Waker" and "Animal Crossing"; thinking that I would personally enjoy a game with the simple and relaxed gameplay loop of "Animal Crossing" and travelling by boat. I really enjoyed crafting the world and I plan on eventually expanding upon this idea.<br><br>This was created for the <a href="https://itch.io/jam/vimjam">"8 Bits to Infinity VimJam"</a> where the theme was "There and Back" and the game had to include collectibles.</p>
             
@@ -95,7 +95,7 @@
 
         <div class="content" data-identifier="2">
             <p></p>
-            <iframe frameborder="0" src="https://itch.io/embed/760482?border_width=3&amp;dark=true" width="100%" height="171"><a href="https://kaiseidev.itch.io/roots-of-all-evil">Roots of all Evil by Kaisei Dev</a>
+            <iframe frameborder="0" src="https://itch.io/embed/760482?border_width=3&amp;dark=true" width="96%" height="171"><a href="https://kaiseidev.itch.io/roots-of-all-evil">Roots of all Evil by Kaisei Dev</a>
             </iframe>
             
             <p>A short top-down shooter game where you fight against an evil tree, burning its roots as you go.<br><br>This was a game I made for the Weekly Game Jam 166, where the theme was "Roots".</p>
@@ -146,13 +146,16 @@
 
         <div class="content" data-identifier="4">
             <p></p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/lqwYQ9UmAdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <a href="files/MLStates%20Agents%20Evaluation.pdf" target="_blank">Read More</a>
+            <iframe width="560" height="315" class="youtube-embed" src="https://www.youtube.com/embed/lqwYQ9UmAdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>
+                This project explores the use of Reinforcement Learning in producing an agent that can react to its environment appropriately.<br><br>The Agent was trained to react to certain types of obstacle with the correct animation state in order to avoid collision with said obstacle. This acts as an alternate approach to Finite State Machines for example.<br><br>This makes use of the Unity MLAgents package.
+                <a href="files/MLStates%20Agents%20Evaluation.pdf" target="_blank">Read More</a>
+            </p>
             
         </div>
 
         <div class="content" data-identifier="5">
-            <p>A project exploring the use of machine learning as an aid in creating images.<br> This project was the subject of my dissertation. <br> It uses an autoencoder trained on real-world map data to generate satellite style images based on layouts you create. </br>Read more <a href="files/000979004_Fukaya_Final_Year_Project_Dissertation.pdf" target="_blank">here</a></p>
+            <p>The subject of of undergraduate dissertation- this project explores the use of machine learning as an aid in creating images.<br><br> It uses an autoencoder trained on real-world map data to generate satellite style images based on layouts you create.<br><br> There were two main steps to this project, the first was developing and training the neural network model, for which I learnt how to use Keras, a Python library that interacts with TensorFlow. The type of model I chose was an Autoencoder, this is a kind of neural network that learns how to both encode and decode an input. By training this on road map images with their sattelite counter-parts as targets, the model is able to interpret images of the former style and produce an approximation of that image in the latter style. <br><br>The second step was creating an application that would house this neural network and allow for users to interact with it. This took a lot of experimentation as, at the time there was little up to date information on how to do what I had planned. I used Unity Engine for this.<br><br>Read more <a href="files/000979004_Fukaya_Final_Year_Project_Dissertation.pdf" target="_blank">here</a></p>
             
             <button id="mapAEButton">Download</button>
         </div>

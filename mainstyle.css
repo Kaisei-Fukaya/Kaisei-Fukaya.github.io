@@ -46,6 +46,7 @@ a:hover{
     padding: 10px;
     overflow: auto;
     min-height: 1300px;
+    overflow-y: hidden;
 }
 #sideDivL{
     display: block;
@@ -97,11 +98,14 @@ button{
     width: 50%;
     height: 30px;
     margin: auto;
-    background-color: #BFCC94;
+    font-family: Roboto, monospace;
+    font-size: 15pt;
+    font-weight: normal;
+    background-color: #fc6c28;
     border-radius: 6px;
-    border-style: solid;
-    border-color: #B4CDED;
-    color: #0D1821;
+    border: none;
+    color: white;
+    margin-top: 10px;
 }
 button:hover{
     background-color: #B4CDED;
@@ -491,5 +495,44 @@ input[type="submit"]:hover{
     }
     #sideDivL{
         display: none;
+    }
+}
+
+@media screen and (max-width:800px){
+    #mainDiv{
+        width: 400px;
+        overflow-x: hidden;
+    }
+    .gridParent{
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-rows: repeat(6, minmax(100px, 170px));
+    }
+    
+    h1{
+        font-size: 40pt;
+        border-style:dashed;
+        border-color: darkgray;
+        text-align: center;
+        border-radius: 40px;
+        margin: auto;
+        margin-bottom: 30px;
+        width: 380px;
+        line-height: 30pt;
+    }
+    
+    h2{
+        color: #B4CDED;
+        padding: 5px;
+        font-family:monospace;
+        font-size: 40pt;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 10px;
+        width: 400px;
+    }
+
+    .youtube-embed{
+        width: 350px;
+        height: 215px;
     }
 }

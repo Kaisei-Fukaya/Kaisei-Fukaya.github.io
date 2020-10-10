@@ -46,6 +46,7 @@ a:hover{
     padding: 10px;
     overflow: auto;
     min-height: 1300px;
+    overflow-x: hidden;
     overflow-y: hidden;
 }
 #sideDivL{
@@ -86,8 +87,13 @@ a:hover{
     margin: 0;
     line-height: 0;
 }
-.main-subheading{
-    text-align: right;
+#main-subheading{
+    display: block;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    color: #B4CDED;
 }
 footer{
     padding: 2em;
@@ -127,7 +133,7 @@ li{
     color: white;
     padding: 5px;
     line-height: 1.5em;
-    font-family:monospace;
+    font-family: Roboto, monospace;
     font-size: 13pt;
     margin: auto;
     margin-bottom: 20px;
@@ -145,15 +151,17 @@ h2{
 }
 h1{
     color: #B4CDED;
-    padding: 40px;
-    font-family:monospace;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    padding-right: 0;
+    padding-left: 0;
+    font-family: monospace;
     font-size: 50pt;
 /*    border-style:dashed;
     border-color: darkgray;*/
     text-align: center;
-    border-radius: 40px;
     margin: auto;
-    margin-bottom: 30px;
+    border-radius: 40px;
     width: 580px;
     line-height: 30pt;
 }
@@ -530,13 +538,21 @@ input[type="submit"]:hover{
         font-size: 40pt;
 /*        border-style:dashed;
         border-color: darkgray;*/
-        line-height: 1.5;
+        line-height: 1;
         text-align: center;
-        border-radius: 40px;
         margin: auto;
-        margin-bottom: 30px;
-        width: 380px;
-        line-height: 30pt;
+        padding-bottom: 0;
+        width: 100%;
+        
+    }
+    
+    #main-subheading{
+        display: block;
+        text-align: center;
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        color: #B4CDED;
     }
     
     h2{
@@ -547,7 +563,7 @@ input[type="submit"]:hover{
         text-align: center;
         margin: auto;
         margin-bottom: 10px;
-        width: 400px;
+        width: 90%;
     }
 
     .youtube-embed{

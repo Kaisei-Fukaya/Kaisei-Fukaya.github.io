@@ -13,7 +13,7 @@
     <div id="sideDivL"></div>
     <div id="sideDivR"></div>
     <div id="mainDiv">
-        <h1>Kaisei Fukaya <br> <span class="subheading">Game Developer|Programmer</span></h1>
+        <h1>Kaisei Fukaya <br> <span class="subheading" id="main-subheading">Game Developer|Programmer</span></h1>
         
         <p>Greetings! <br><br> I'm glad you stopped by. Below you will find a handful of the projects I have had the pleasure of working on.<br><br>Want to contact me? Visit the <a href="about.html">"About Me"</a> page!</p>
     
@@ -59,7 +59,7 @@
 
             <div class="projItem">
                 <img class="projItemImg collapsible undraggable contextImage" src="img/nanoBotsMainLogo.png" data-identifier="8"></img>
-                <div class="platformOverlay">Unity Game</div>
+                <div class="platformOverlay">AR<br><span class="subheading">Unity Game</span></div>
             </div>
 
             <div class="projItem">
@@ -74,7 +74,7 @@
 
             <div class="projItem">
                 <img class="projItemImg collapsible undraggable contextImage" id="balanceThumb" src="img/cover.PNG" data-identifier="11"></img>
-                <div class="platformOverlay">JavaScript</div>
+                <div class="platformOverlay">Web Game</div>
             </div>
         
         </div>
@@ -170,31 +170,60 @@
             <p>
                 Project Valkyrie is a roguelike with randomised levels and loot. <br><br>Developed by a team consisting of my self and 5 others. I was responsible for designing and implementing the procedural mechanics in the game.
             </p>
-            <img class="eightyPercImg expandable" src="img/ProcGenIdeas.png"></img>
             <p>
-                I focused mainly on two systems: Level-generation and Item generation.
+                I focused mainly on two systems: Level-generation and Item generation. The concept for the levels was that of a labyrinth that the player must navigate to progress. I decided to adapt Prim's algorithm to generate levels using tiles, this way the artist could create different tile-sets that could be swapped out without any change to the code.
             </p>
+            <p class="audioCaption">Initial Procedural System Plans</p>
+            <div class="topBottomParent">
+                <img style="height: auto;" class="procGenImg expandable" src="img/ProcGenIdeas.png"></img>
+                <img class="procGenImg expandable" src="img/Different%20Room%20Size%20idea.png"></img>
+            </div>
+            <p class="audioCaption">Early Prototype</p>
+            <div class="sideBySideParent">
+                <img class="procGenImg expandable" src="img/procGenEarly1.png"></img>
+                <img class="procGenImg expandable" src="img/procGenEarly2.png"></img>
+            </div>
+            <p></p>
+            <p class="audioCaption">Examples of levels in final prototype (top-down)</p>
             <div class="sideBySideParent">
                 <img class="procGenImg expandable" src="img/RoguelikeLevelGen1.png"></img>
                 <img class="procGenImg expandable" src="img/RoguelikeLevelGen2.png"></img>
             </div>
-            <img class="eightyPercImg expandable" src="img/ItemGenExample1.png"></img>
+            <p>
+                For the item generation I took inspiration from games such as <a href="https://en.wikipedia.org/wiki/Diablo_II" target="_blank">"Diablo 2"</a> and <a target="_blank" href="https://www.pathofexile.com/">"Path of Exile"</a>, with items deriving from a base type, then having modifiers added on in the form of affixes. These items had tiers that would dennote rarity and be reflected in the potency of the modifiers.
+            </p>
+            <p class="audioCaption">Example of Generated Item</p>
+            <img class="ninetyPercImg expandable" src="img/ItemGenExample1.png"></img>
+
+            <p style="text-align: center">Read more <a href="files/000979004_Fukaya_Games_Evaluation_Final.pdf" target="_blank" >here</a></p>
 
         </div>
 
         <div class="content" data-identifier="8">
-            <p>Nano-Bots is an AR game where you control different kinds of tiny robots with different abilities. <br><br></p>
+            <p>Nano-Bots is an Augmented Reality puzzle game where you control different kinds of tiny robots with different abilities, built for Android devices.<br><br>I focused on character and level design during pre-production, knowing that each character would need a unique silhouette and personality to reflect their abilities, and that these abilities would need to be made evident through gameplay.<br><br>Developing an AR game was a unique challenge. Having to consider real world space and scaling in order to support the concept of controlling nano-bots in real-world situations.</p>
             <p class="audioCaption">Final Prototype</p>
             <div id="pcCompareParent">
                 <img class="subImg expandable" src="img/nanoBotsS3.png"></img>
                 <img class="subImg expandable" src="img/nanoBotsS2.png"></img>
             </div>
+            <p></p>
             <p class="audioCaption">Level Designs</p>
             <div id="pcCompareParent">
                 <img class="subImg expandable" src="img/Level1Design.png"></img>
                 <img class="subImg expandable" src="img/Level2Design.png"></img>
             </div>
-            <p>Check out the <a href="files/NanoBotsGDD.pdf" target="_blank">GDD</a></p>
+            <p></p>
+            <p class="audioCaption">Tutorial Stage Designs</p>
+            <div id="pcCompareParent">
+                <img class="subImg expandable" src="img/TutStage1.png"></img>
+                <img class="subImg expandable" src="img/TutStage2.png"></img>
+            </div>
+            <p></p>
+            <div id="pcCompareParent">
+                <img class="subImg expandable" src="img/TutStage3.png"></img>
+                <img class="subImg expandable" src="img/TutStage4.png"></img>
+            </div>
+            <p style="text-align: center">Check out the <a href="files/NanoBotsGDD.pdf" target="_blank">GDD</a></p>
         </div>
 
         <div class="content" data-identifier="9">
@@ -216,6 +245,8 @@
                 <img class="subImg expandable" src="img/compare%20v2.jpg"></img>
                 <img class="subImg expandable" src="img/build%20v2.jpg"></img>
             </div>
+            <p class="audioCaption">Flow Diagram for System</p>
+            <img src="img/Diagram.png" class="ninetyPercImg expandable">
         </div>
 
         <div class="content" data-identifier="11">

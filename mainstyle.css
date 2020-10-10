@@ -86,6 +86,9 @@ a:hover{
     margin: 0;
     line-height: 0;
 }
+.main-subheading{
+    text-align: right;
+}
 footer{
     padding: 2em;
     text-align: center;
@@ -142,11 +145,11 @@ h2{
 }
 h1{
     color: #B4CDED;
-    padding: 10px;
+    padding: 40px;
     font-family:monospace;
     font-size: 50pt;
-    border-style:dashed;
-    border-color: darkgray;
+/*    border-style:dashed;
+    border-color: darkgray;*/
     text-align: center;
     border-radius: 40px;
     margin: auto;
@@ -272,12 +275,14 @@ iframe{
     width: 100%;
     height: auto;
     margin: auto;
+    box-shadow: 2px 3px 3px 1px #050c11;
 }
-.eightyPercImg{
+.ninetyPercImg{
     display: block;
-    width: 80%;
+    width: 90%;
     height: auto;
     margin: auto;
+    box-shadow: 2px 3px 3px 1px #050c11;
 }
 #pcCompareParent{
     display: grid;
@@ -302,12 +307,21 @@ iframe{
 
 .sideBySideParent{
     display: grid;
-    width: 100%;
+    width: 90%;
     margin: auto;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-gap: 0px;
-    overflow: none;
+    overflow: hidden;
+}
+.topBottomParent{
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 540px);
+    grid-gap: 0px;
+    overflow: hidden;
 }
 .pageSeperator{
     background-color: #B4CDED;
@@ -339,6 +353,10 @@ iframe{
     border-radius: 10px;
     box-shadow: 2px 3px 3px 1px #050c11;
     background-color: #fc6c28;
+}
+
+.emphasis a:hover{
+    color: #050c11;
 }
 
 #yonderThumb:hover{
@@ -510,8 +528,9 @@ input[type="submit"]:hover{
     
     h1{
         font-size: 40pt;
-        border-style:dashed;
-        border-color: darkgray;
+/*        border-style:dashed;
+        border-color: darkgray;*/
+        line-height: 1.5;
         text-align: center;
         border-radius: 40px;
         margin: auto;
@@ -534,5 +553,15 @@ input[type="submit"]:hover{
     .youtube-embed{
         width: 350px;
         height: 215px;
+    }
+    
+    .topBottomParent{
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, 320px);
+        grid-gap: 0px;
+        overflow: hidden;
     }
 }

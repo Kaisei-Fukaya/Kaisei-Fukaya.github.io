@@ -399,6 +399,9 @@ iframe{
     content: url(img/shootergif3v3.gif);
     white-space: nowrap;
 }
+#android505Thumb:hover{
+    content: url(img/Android_505gif1v3.gif);
+}
 
 #openToggleButton{
     width: 60px;

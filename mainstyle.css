@@ -346,12 +346,26 @@ iframe{
 }
 
 .icon{
-    display: block;
     color: aliceblue;
     background-color: none;
-    width: 100px;
-    margin: auto;
+    overflow: hidden;
+    width: 35px;
+    height: 35px;
+    margin: 6px;
     font-size: 50px;
+}
+
+.icon-parent{
+    display: inline-block;
+    overflow: hidden;
+    background-color: rgba(100,100,100,0.2);
+    border-radius: 50%;
+    border-color: aliceblue;
+    transition: background-color 0.3s linear;
+}
+
+.icon-parent:hover{
+    background-color: rgba(100,100,100,0.8);
 }
 
 .emphasis{
@@ -374,7 +388,7 @@ iframe{
     content: url(img/Balancegif.gif);
 }
 #waterThumb:hover{
-    content: url(img/glassGyroSync2.gif);
+    content: url(img/glassGyroSync2v2.gif);
     white-space: nowrap;
 }
 #rootThumb:hover{
@@ -421,14 +435,14 @@ iframe{
     top: 50%;
     max-height: inherit;
     position: relative;
-    width: 70%;
+    width: 95%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     height: auto;
     margin: auto;
     box-shadow: none;
     padding: 20px;
-    object-fit: contain;
+    object-fit: fill;
     transition: max-height 0.05s ease-in;
 }
 #img-popup-img:hover{

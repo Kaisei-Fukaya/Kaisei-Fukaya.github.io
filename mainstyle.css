@@ -445,7 +445,7 @@ iframe{
     margin: auto;
     box-shadow: none;
     padding: 20px;
-    object-fit: fill;
+    object-fit: contain;
     transition: max-height 0.05s ease-in;
 }
 #img-popup-img:hover{

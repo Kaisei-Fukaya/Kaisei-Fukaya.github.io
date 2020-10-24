@@ -601,7 +601,7 @@ input[type="submit"]:hover{
 
 @media screen and (max-width:455px){
     #mainDiv{
-        width: 380px;
+        width: 250px;
         overflow-x: hidden;
     }
     
@@ -609,8 +609,7 @@ input[type="submit"]:hover{
         display: grid;
         width: 100%;
         margin: auto;
-        grid-template-columns: repeat(2, minmax(150px, 1fr));
-        grid-template-rows: repeat(5, minmax(50px, 140px));
+        grid-template-columns: repeat(1, minmax(150px, 1fr));
         grid-gap: 0px;
         grid-row-gap: 10px;
         overflow: none;

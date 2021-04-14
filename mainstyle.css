@@ -537,6 +537,8 @@ input[type="submit"]:hover{
     box-shadow: 1px 1px 3px 1px #050c11;
     width: 320px;
     height: 480px;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 @media screen and (max-width:900px){
@@ -608,7 +610,7 @@ input[type="submit"]:hover{
 
 @media screen and (max-width:455px){
     #mainDiv{
-        width: 250px;
+        width: 320px;
         overflow-x: hidden;
     }
     

@@ -6,15 +6,15 @@
     <title>Unity WebGL Player | InteractiveCharacterSheet</title>
   </head>
   <body style="text-align: center">
-    <canvas id="unity-canvas" style="width: 320px; height: 480px; background: #231F20"></canvas>
+    <canvas id="unity-canvas" style="width: 320px; height: 480px; background: #0D1821; position: absolute; top: 0px; left: 0px"></canvas>
     <script src="Build/Builds.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/Builds.data.gz",
-        frameworkUrl: "Build/Builds.framework.js.gz",
-        codeUrl: "Build/Builds.wasm.gz",
+        dataUrl: "Build/Builds.data",
+        frameworkUrl: "Build/Builds.framework.js",
+        codeUrl: "Build/Builds.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
+        companyName: "Kaisei Fukaya",
         productName: "InteractiveCharacterSheet",
         productVersion: "0.1",
       });

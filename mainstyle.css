@@ -532,6 +532,13 @@ input[type="submit"]:hover{
     padding: 3px 0;
 }
 
+#iCS
+{
+    box-shadow: 1px 1px 3px 1px #050c11;
+    width: 320px;
+    height: 480px;
+}
+
 @media screen and (max-width:900px){
     #sideDivR{
         display: none;

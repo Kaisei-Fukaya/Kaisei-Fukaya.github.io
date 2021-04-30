@@ -562,6 +562,40 @@ input[type="submit"]:hover{
     margin-bottom: 10px;
 }
 
+#currentWork
+{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    grid-gap: 0px;
+    overflow: none;
+    margin-bottom: 10px;
+    word-break: break-word;
+    padding: 10px;
+}
+
+.currentWorkTxt
+{
+    text-align: center; 
+    padding: 50px 0;
+}
+
+#pagePanel
+{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    margin: auto;
+    width: 100%;
+    grid-column-gap: 10px;
+}
+
+.pageButton
+{
+    width: 200px;
+}
+
 @media screen and (max-width:900px){
     #sideDivR{
         display: none;
@@ -634,6 +668,23 @@ input[type="submit"]:hover{
         grid-template-columns: repeat(1, minmax(200px, 1fr));
         background: linear-gradient(180deg, rgba(13,24,33,1) 0%, rgba(20,24,46,1) 35%, rgba(20,24,46,1) 100%);
     }
+    
+    #currentWork
+    {
+        display: block;
+        background-color: rgba(0,0,0,0.3);
+        border-radius: 10px;
+        grid-gap: 0px;
+        overflow: none;
+        margin-bottom: 10px;
+        word-break: break-word;
+    }
+    
+    .currentWorkTxt
+    {
+        text-align: center; 
+        padding: 0px 0;
+    }
 
 }
 
@@ -645,7 +696,7 @@ input[type="submit"]:hover{
     
     .gridParent{
         display: grid;
-        width: 100%;
+        width: 250px;
         margin: auto;
         grid-template-columns: repeat(1, minmax(150px, 1fr));
         grid-gap: 0px;

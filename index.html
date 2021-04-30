@@ -17,9 +17,22 @@
     <div id="mainDiv">
         <h1>Kaisei Fukaya</h1>
         <p id="main-subheading">Unity Game Developer | Programmer</p>
+        <div id="pagePanel"><button onclick="window.location.href='about.html';" class="pageButton">About Me</button></div>
+        
         
         <div style="padding-top:50px">
-            <p>Greetings! <br><br> I'm glad you stopped by. Below you will find a handful of the projects I have had the pleasure of working on.<br><br>Want to contact me? Visit the <a href="about.html">"About Me"</a> page!</p>
+            <p>Greetings! <br><br> I'm a graduate Unity Game Developer/Programmer currently working on procedural level generation and editor tooling.</p>
+        </div>
+        
+        <div id="currentWork">
+            <div><p class="currentWorkTxt">I am currently working on a procedural level generation system that builds coherent tile based levels.</p></div>
+            <video autoplay loop muted playsinline class="subImg contextImage">
+                <source src="img/levelgeneration.webm" type="video/webm">
+            </video>
+            <video autoplay loop muted playsinline class="subImg contextImage">
+                <source src="img/tilesettooling.webm" type="video/webm">
+            </video>
+            <div><p class="currentWorkTxt">Also working on tooling to make the system easy for designers and artists to work with.</p></div>
         </div>
     
         
@@ -49,12 +62,12 @@
     
             <div class="projItem">
                 <img class="projItemImg collapsible undraggable contextImage" src="img/MLSTATES_image_0390.png" data-identifier="5"></img>
-                <div class="platformOverlay">Reinforcement Learning</div>
+                <div class="platformOverlay">Reinforcement Learning in Unity</div>
             </div>
         
             <div class="projItem">
                 <img class="projItemImg collapsible undraggable contextImage" src="img/mapae.PNG" data-identifier="6"></img>
-                <div class="platformOverlay">Machine-Learning</div>
+                <div class="platformOverlay">Machine-Learning in Unity</div>
             </div>
 
             <div class="projItem">
@@ -305,7 +318,7 @@
         <a href="https://www.linkedin.com/in/kaisei-fukaya-7250a6173/" target="_blank" class="icon-parent"><img src="img/linkedin.svg" class="icon"></a>
     </footer>
 
-    <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
 
 </body>
     <script>
@@ -361,7 +374,7 @@
             images[i].addEventListener("click", function(){
                 popupImg.src = this.src;
                 popup.style.maxHeight = 100+"%";
-                console.log("clicked image");
+                /*console.log("clicked image");*/
             });
         }
         
